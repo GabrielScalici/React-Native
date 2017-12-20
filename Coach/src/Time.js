@@ -11,6 +11,9 @@ import{
 //Style from css
 import style from './design';
 
+//Languages
+import * as texts from './texts';
+
 
 export default class Time extends React.Component {
     static navigationOption = {
@@ -25,8 +28,8 @@ export default class Time extends React.Component {
 
             }
         }>
-            <Text style={{fontSize: 30}}>
-                This is tab Time
+            <Text style={style.title}>
+                {texts.Time}
             </Text>
 
         </View>

@@ -11,6 +11,9 @@ import{
 //Style from css
 import style from './design';
 
+//Languages
+import * as texts from './texts';
+
 export default class Goal extends React.Component {
     static navigationOption = {
         tabBarLabel: 'Goal',
@@ -24,8 +27,8 @@ export default class Goal extends React.Component {
 
             }
         }>
-            <Text style={{fontSize: 30}}>
-                This is tab Goal
+            <Text style={style.title}>
+                {texts.Goal}
             </Text>
 
         </View>

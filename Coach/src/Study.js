@@ -11,6 +11,9 @@ import{
 //Style from css
 import style from './design';
 
+//Languages
+import * as texts from './texts';
+
 
 export default class Study extends React.Component {
     static navigationOption = {
@@ -25,8 +28,8 @@ export default class Study extends React.Component {
 
             }
         }>
-            <Text style={{fontSize: 30}}>
-                This is tab Study
+            <Text style={style.title}>
+                {texts.Study}
             </Text>
 
         </View>
