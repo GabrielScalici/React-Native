@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
   },
   instructions: {
     textAlign: 'center',
-    color: '#8E8B82',
+    color: '#E9DCBE',
     marginBottom: 5,
   },
 });
