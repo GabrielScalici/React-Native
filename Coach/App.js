@@ -18,6 +18,7 @@ import {Platform, StyleSheet} from 'react-native';
 //import swipe
 import { StackNavigator, TabNavigator } from "react-navigation";
 
+
 //Import screens
 import Coach from  './src/Coach'
 import Goal from  './src/Goal'
