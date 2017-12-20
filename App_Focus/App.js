@@ -24,13 +24,16 @@ export default class App extends Component<{}> {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          Welcome to Focus App!
         </Text>
         <Text style={styles.instructions}>
           To get started, edit App.js
         </Text>
         <Text style={styles.instructions}>
           {instructions}
+        </Text>
+        <Text style={styles.welcome}>
+          Olá roberto
         </Text>
       </View>
     );
@@ -42,16 +45,17 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#343434',
   },
   welcome: {
-    fontSize: 20,
-    textAlign: 'center',
+    fontSize: 30,
     margin: 10,
+    color: '#E9DCBE',
+    fontFamily: 'verdana',
   },
   instructions: {
     textAlign: 'center',
-    color: '#333333',
+    color: '#8E8B82',
     marginBottom: 5,
   },
 });

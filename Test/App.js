@@ -12,6 +12,9 @@ import {
   View
 } from 'react-native';
 
+
+
+
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
     'Cmd+D or shake for dev menu',
@@ -45,12 +48,13 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#CFD8DC',
+    backgroundColor: '#DDDDDD',
   },
   welcome: {
-    fontSize: 20,
+    fontSize: 30,
     textAlign: 'center',
     margin: 10,
+    color: '#004A7C',
   },
   instructions: {
     textAlign: 'center',
