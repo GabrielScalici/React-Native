@@ -8,6 +8,8 @@ import{
     Imagem
 } from 'react-native';
 
+//Style from css
+import style from './design';
 
 export default class Goal extends React.Component {
     static navigationOption = {

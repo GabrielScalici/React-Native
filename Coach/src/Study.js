@@ -8,6 +8,9 @@ import{
     Imagem
 } from 'react-native';
 
+//Style from css
+import style from './design';
+
 
 export default class Study extends React.Component {
     static navigationOption = {

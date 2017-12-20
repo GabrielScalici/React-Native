@@ -8,11 +8,16 @@ import{
     Imagem
 } from 'react-native';
 
+//Style from css
+import style from './design';
+
 
 export default class Coach extends React.Component {
+    //Show in tab bar
     static navigationOption = {
         tabBarLabel: 'Coach'
     }
+
     render(){
         return <View style={
             {
@@ -22,7 +27,7 @@ export default class Coach extends React.Component {
 
             }
         }>
-            <Text style={{fontSize: 30}}>
+            <Text style = {style.title}>
                 This is tab Coach
             </Text>
 
