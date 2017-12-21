@@ -40,7 +40,33 @@ module.exports = StyleSheet.create({
         flex:1,
         justifyContent: 'center',
         alignItems: 'center',
+        justifyContent: 'space-between',
+        flexDirection: 'row',
 
+    },
+
+    items_coach_user: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        borderColor: '#2a4944',
+        height: 100,
+        marginLeft: 20,
+        marginRight: 20,
+        borderBottomColor: '#CDE3EB',
+        borderBottomWidth: 1,
+    },
+
+    items_infos_user: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        borderColor: '#2a4944',
+        height: 70,
+        marginLeft: 20,
+        marginRight: 20,
+        borderBottomColor: '#CDE3EB',
+        borderBottomWidth: 1,
     },
 
     image_user_study: {
@@ -57,9 +83,32 @@ module.exports = StyleSheet.create({
         marginTop: 10,
     },
 
+    title_infos: {
+        fontSize: 20,
+        fontWeight: '100' ,
+        margin: 10,
+        color: '#143A52',
+        fontFamily: 'verdana',
+        justifyContent: 'center',
+    },
+
+    /*
+    --
+    --       SCREEN COACH
+    --
+    */
 
 
-
+    items_infos_coach: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        borderColor: '#2a4944',
+        height: 100,
+        marginLeft: 20,
+        marginRight: 20,
+        borderBottomColor: '#CDE3EB',
+    },
 
 
 

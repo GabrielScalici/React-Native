@@ -41,44 +41,75 @@ export default class Study extends React.Component {
 
 
                 <View style={style.view_infos_user}>
-
                     <ScrollView>
+                        <View style={style.items_coach_user}>
 
-                        <Text style={style.name_user}>
-                            Infos scrollview
-                        </Text>
-                        <Text style={style.name_user}>
-                            Infos scrollview
-                        </Text>
-                        <Text style={style.name_user}>
-                            Infos scrollview
-                        </Text>
-                        <Text style={style.name_user}>
-                            Infos scrollview
-                        </Text>
-                        <Text style={style.name_user}>
-                            Infos scrollview
-                        </Text>
-                        <Text style={style.name_user}>
-                            Infos scrollview
-                        </Text>
-                        <Text style={style.name_user}>
-                            Infos scrollview
-                        </Text>
-                        <Text style={style.name_user}>
-                            Infos scrollview
-                        </Text>
-                        <Text style={style.name_user}>
-                            Infos scrollview
-                        </Text>
-                        <Text style={style.name_user}>
-                            Infos scrollview
-                        </Text>
+                            <Text style={style.title_infos}>
+                                Coach
+                            </Text>
+
+                            <Image
+                                style={{width: 100, height: 100}}
+                                source={require('./images/coach1.png')}
+                            />
+                        </View>
+
+                        <View style={style.items_infos_user}>
+
+                            <Text style={style.title_infos}>
+                                Tempo de estudo:
+                            </Text>
+                            <Text style={style.title_infos}>
+                                12:00 min
+                            </Text>
+
+                        </View>
+                        <View style={style.items_infos_user}>
+
+                            <Text style={style.title_infos}>
+                                Tempo de estudo:
+                            </Text>
+                            <Text style={style.title_infos}>
+                                12:00 min
+                            </Text>
+
+                        </View>
+                        <View style={style.items_infos_user}>
+
+                            <Text style={style.title_infos}>
+                                Tempo de estudo:
+                            </Text>
+                            <Text style={style.title_infos}>
+                                12:00 min
+                            </Text>
+
+                        </View>
+                        <View style={style.items_infos_user}>
+
+                            <Text style={style.title_infos}>
+                                Tempo de estudo:
+                            </Text>
+                            <Text style={style.title_infos}>
+                                12:00 min
+                            </Text>
+
+                        </View>
+                        <View style={style.items_infos_user}>
+
+                            <Text style={style.title_infos}>
+                                Tempo de estudo:
+                            </Text>
+                            <Text style={style.title_infos}>
+                                12:00 min
+                            </Text>
+
+                        </View>
+
 
 
                     </ScrollView>
-
                 </View>
+
 
             </View>
         )
