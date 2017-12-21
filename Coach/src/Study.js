@@ -5,7 +5,8 @@ import{
     Text,
     View,
     Button,
-    Imagem
+    Image,
+    ScrollView,
 } from 'react-native';
 
 //Style from css
@@ -19,19 +20,68 @@ export default class Study extends React.Component {
     static navigationOption = {
         tabBarLabel: 'Study'
     }
+
+
     render(){
-        return <View style={
-            {
-                flex: 1,
-                justifyContent: 'center',
-                alignItems: 'center'
+        return (
 
-            }
-        }>
-            <Text style={style.title}>
-                {texts.Study}
-            </Text>
 
-        </View>
+            <View style={style.view_study}>
+
+                <View style={style.view_head_user}>
+
+                    <Image
+                        source={require('./images/coach2.png')}
+                        style={style.image_user_study}
+                    />
+                    <Text style={style.name_user}>
+                        Gabriel Henrique
+                    </Text>
+                </View>
+
+
+                <View style={style.view_infos_user}>
+
+                    <ScrollView>
+
+                        <Text style={style.name_user}>
+                            Infos scrollview
+                        </Text>
+                        <Text style={style.name_user}>
+                            Infos scrollview
+                        </Text>
+                        <Text style={style.name_user}>
+                            Infos scrollview
+                        </Text>
+                        <Text style={style.name_user}>
+                            Infos scrollview
+                        </Text>
+                        <Text style={style.name_user}>
+                            Infos scrollview
+                        </Text>
+                        <Text style={style.name_user}>
+                            Infos scrollview
+                        </Text>
+                        <Text style={style.name_user}>
+                            Infos scrollview
+                        </Text>
+                        <Text style={style.name_user}>
+                            Infos scrollview
+                        </Text>
+                        <Text style={style.name_user}>
+                            Infos scrollview
+                        </Text>
+                        <Text style={style.name_user}>
+                            Infos scrollview
+                        </Text>
+
+
+                    </ScrollView>
+
+                </View>
+
+            </View>
+        )
+
     }
 }

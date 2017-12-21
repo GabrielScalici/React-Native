@@ -2,6 +2,7 @@ import {StyleSheet} from 'react-native';
 
 module.exports = StyleSheet.create({
 
+    //Atuais
     //Strings
     title: {
         fontSize: 45,
@@ -11,6 +12,61 @@ module.exports = StyleSheet.create({
         justifyContent: 'center',
         marginTop: 60,
     },
+
+
+
+
+    /*
+    --
+    --       SCREEN STUDY
+    --
+    */
+
+    view_study: {
+        flex: 1,
+        justifyContent: 'center', //externo
+        alignItems: 'center',   //interno
+
+    },
+
+    view_head_user: {
+      flex:1,
+      justifyContent: 'center',
+      alignItems: 'center',
+
+    },
+
+    view_infos_user: {
+        flex:1,
+        justifyContent: 'center',
+        alignItems: 'center',
+
+    },
+
+    image_user_study: {
+        width: 200,
+        height: 200
+    },
+
+    name_user: {
+        fontSize: 30,
+        margin: 10,
+        color: '#143A52',
+        fontFamily: 'verdana',
+        justifyContent: 'center',
+        marginTop: 10,
+    },
+
+
+
+
+
+
+
+
+
+
+    //Antigos
 
     names: {
         fontSize: 30,
