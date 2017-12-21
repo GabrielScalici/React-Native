@@ -1,4 +1,10 @@
 
+// vermelho #E57373
+//amarelo #FFF176
+//verde #4DB6AC
+
+
+
 
 import React from 'react'
 import{
@@ -35,22 +41,22 @@ export default class Study extends React.Component {
                         style={style.image_user_study}
                     />
                     <Text style={style.name_user}>
-                        Xi No Jang
+                        Yo Ji Sung
                     </Text>
                 </View>
 
 
                 <View style={style.view_infos_user}>
                     <ScrollView>
-                        <View style={style.items_coach_user}>
+                        <View style={style.items_infos_coach}>
 
                             <Text style={style.title_infos}>
                                 Status:
                             </Text>
 
                             <Image
-                                style={{width: 100, height: 100}}
-                                source={require('./images/coach1.png')}
+                                style={{width: 80, height: 80}}
+                                source={require('./images/happy.png')}
                             />
                         </View>
 

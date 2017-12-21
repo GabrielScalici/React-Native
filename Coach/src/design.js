@@ -107,7 +107,6 @@ module.exports = StyleSheet.create({
         height: 100,
         marginLeft: 20,
         marginRight: 20,
-        borderBottomColor: '#CDE3EB',
     },
 
 
