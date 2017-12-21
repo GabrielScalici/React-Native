@@ -29,5 +29,15 @@ module.exports = StyleSheet.create({
         alignItems: 'center'
     },
 
+    item: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        padding: 20,
+        margin: 5,
+        borderColor: '#2a4944',
+        backgroundColor: '#6E828A',
+    }
+
 
 });

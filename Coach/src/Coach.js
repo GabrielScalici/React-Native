@@ -7,7 +7,8 @@ import{
     Button,
     Imagem,
     ScrollView,
-    StyleSheet
+    StyleSheet,
+    TouchableOpacity
 } from 'react-native';
 
 //Style from css
@@ -16,7 +17,9 @@ import style from './design';
 //Languages
 import * as texts from './texts';
 
-var a = true;
+const test = () => {
+    alert('Test');
+}
 
 
 export default class Study extends React.Component {
@@ -48,16 +51,20 @@ export default class Study extends React.Component {
                 <Text style={style.title}>
 
                     {texts.Coach}
-            
+
                 </Text>
 
                 <ScrollView>
                     {
                         this.state.names.map((item, index) => (
-                        <View key = {item.id} style = {styles.item}>
-                            <Text style={style.itens_flatlist}>
-                                {item.name}
-                            </Text>
+                        <View key = {item.id} style = {style.item}>
+
+                            <TouchableOpacity onPress={test}>
+                                <Text style={style.itens_flatlist}>
+                                    {item.name}
+                                </Text>
+                            </TouchableOpacity>
+
                         </View>
                         ))
                     }
@@ -67,16 +74,3 @@ export default class Study extends React.Component {
 
     }
 }
-
-
-const styles = StyleSheet.create ({
-    item: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        padding: 30,
-        margin: 2,
-        borderColor: '#2a4944',
-        backgroundColor: '#6E828A',
-    }
-});
