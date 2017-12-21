@@ -5,7 +5,7 @@ import{
     Text,
     View,
     Button,
-    Imagem,
+    Image,
     ScrollView,
     StyleSheet,
     TouchableOpacity
@@ -29,7 +29,7 @@ export default class Study extends React.Component {
 
     state = {
         names: [
-            {'name': 'Ben', 'id': 1},
+            {'name': 'Benos', 'id': 1},
             {'name': 'Susan', 'id': 2},
             {'name': 'Robert', 'id': 3},
             {'name': 'Mary', 'id': 4},
@@ -60,10 +60,15 @@ export default class Study extends React.Component {
                         <View key = {item.id} style = {style.item}>
 
                             <TouchableOpacity onPress={test}>
-                                <Text style={style.itens_flatlist}>
+                                <Text style={style.names}>
                                     {item.name}
                                 </Text>
                             </TouchableOpacity>
+
+                            <Image
+                                style={{width: 100, height: 100}}
+                                source={require('./images/coach1.png')}
+                            />
 
                         </View>
                         ))

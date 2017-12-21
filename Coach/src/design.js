@@ -12,6 +12,16 @@ module.exports = StyleSheet.create({
         marginTop: 60,
     },
 
+    names: {
+        fontSize: 30,
+        margin: 10,
+        paddingBottom: 50,
+        color: '#143A52',
+        fontFamily: 'verdana',
+        justifyContent: 'center',
+        marginTop: 60,
+    },
+
     //
     view_tabBar: {
         flex: 1,
@@ -23,7 +33,7 @@ module.exports = StyleSheet.create({
     itens_flatlist: {
         fontSize: 10,
         margin: 2,
-        color: '#143A52',
+        color: '#E3EFF3',
         fontFamily: 'verdana',
         justifyContent: 'center',
         alignItems: 'center'
@@ -33,10 +43,10 @@ module.exports = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        padding: 20,
-        margin: 5,
+        padding:1,
+        margin:1,
         borderColor: '#2a4944',
-        backgroundColor: '#6E828A',
+        backgroundColor: '#E3EFF3',
     }
 
 

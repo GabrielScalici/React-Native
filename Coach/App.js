@@ -27,10 +27,10 @@ import Study from  './src/Study'
 
 //Swipe Screen
 var MainScreenNavigator = TabNavigator({
+    Study: {screen: Study},
     Coach: {screen: Coach},
     Goal: {screen: Goal},
     Time: {screen: Time},
-    Study: {screen: Study}
 
 },{
     tabBarPosition: 'bottom',
