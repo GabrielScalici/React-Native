@@ -22,7 +22,7 @@ const test = () => {
 }
 
 
-export default class Study extends React.Component {
+export default class CoachList extends React.Component {
     static navigationOption = {
         tabBarLabel: 'Study'
     }

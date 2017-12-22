@@ -9,7 +9,8 @@ import React from 'react';
 //import elements
 import {
     Text,
-    View
+    View,
+    Navigator,
 } from 'react-native';
 
 //import plataform
@@ -20,25 +21,29 @@ import { StackNavigator, TabNavigator } from "react-navigation";
 
 
 //Import screens
-import Coach from  './src/Coach'
-import Goal from  './src/Goal'
-import Time from  './src/Time'
-import Study from  './src/Study'
+import Coach from  './src/Coach';
+import Goal from  './src/Goal';
+import Time from  './src/Time';
+import Study from  './src/Study';
+import CoachList from  './src/CoachList';
+import EditUser from  './src/EditUser';
 
 //Swipe Screen
 var MainScreenNavigator = TabNavigator({
-    Study: {screen: Study},
-    Coach: {screen: Coach},
-    Goal: {screen: Goal},
-    Time: {screen: Time},
+    Study: {screen: Study, navigationOptions: { tabBarVisible: false  }},
+    Coach: {screen: Coach, navigationOptions: { tabBarVisible: false  }},
+    Goal: {screen: Goal, navigationOptions: { tabBarVisible: false  }},
+    Time: {screen: Time, navigationOptions: { tabBarVisible: false  }},
 
 },{
-    tabBarPosition: 'bottom',
+    //tabBarPosition: 'bottom',
+    //tabBarVisible: false,
     swipeEnabled: true,
-    tabBarOptions: {
-        activeTintColor: 'white',
-        activeBackgroundColor: '#6E828A',
-    }
+    //tabBarHeight: 10,
+    //tabBarOptions: {
+      //  activeTintColor: 'white',
+      //  activeBackgroundColor: '#6E828A',
+    //}
 
 }
 );

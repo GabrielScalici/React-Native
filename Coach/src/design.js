@@ -71,7 +71,8 @@ module.exports = StyleSheet.create({
 
     image_user_study: {
         width: 200,
-        height: 200
+        height: 200,
+        marginTop: 20,
     },
 
     name_user: {
@@ -92,6 +93,22 @@ module.exports = StyleSheet.create({
         justifyContent: 'center',
     },
 
+    description_infos: {
+        fontSize: 15,
+        fontWeight: '100' ,
+        color: '#143A52',
+        fontFamily: 'verdana',
+        justifyContent: 'center',
+    },
+
+    btn_user_edit: {
+        fontSize: 15,
+        fontWeight: '100' ,
+        color: '#143A52',
+        fontFamily: 'verdana',
+        justifyContent: 'center',
+    },
+
     /*
     --
     --       SCREEN COACH
@@ -107,6 +124,44 @@ module.exports = StyleSheet.create({
         height: 100,
         marginLeft: 20,
         marginRight: 20,
+    },
+
+    btn_coach_list: {
+        fontSize: 15,
+        fontWeight: '100' ,
+        color: '#143A52',
+        fontFamily: 'verdana',
+        justifyContent: 'center',
+    },
+
+    image_user_coach: {
+        width: 200,
+        height: 200,
+        marginTop: 25,
+    },
+
+
+
+
+
+    /*
+    --
+    --       SCREEN TIME
+    --
+    */
+
+    view_time: {
+        flex: 1,
+        justifyContent: 'center', //externo
+        alignItems: 'center',   //interno
+
+    },
+
+    circle: {
+        width: 100,
+        height: 100,
+        borderRadius: 100/2,
+        backgroundColor: 'red'
     },
 
 

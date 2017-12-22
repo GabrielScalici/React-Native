@@ -4,8 +4,6 @@ import React from 'react'
 import{
     Text,
     View,
-    Button,
-    Image
 } from 'react-native';
 
 //Style from css
@@ -15,9 +13,9 @@ import style from './design';
 import * as texts from './texts';
 
 
-export default class Time extends React.Component {
+export default class EditUser extends React.Component {
     static navigationOption = {
-        tabBarLabel: 'Time'
+        tabBarLabel: false,
     }
 
 
@@ -26,7 +24,7 @@ export default class Time extends React.Component {
             <View style={style.view_time}>
 
                 <Text style={style.title}>
-                    {texts.Time}
+                    Editar Usuário
                 </Text>
 
 
