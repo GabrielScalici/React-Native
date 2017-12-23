@@ -3,21 +3,21 @@
  * https://github.com/facebook/react-native
  * @flow
  */
-
+/*
 import React from 'react';
 
 //import elements
 import {
-    Text,
-    View,
     Navigator,
 } from 'react-native';
+
+import { Route, Scene} from 'react-native-router-flux';
 
 //import plataform
 import {Platform, StyleSheet} from 'react-native';
 
 //import swipe
-import { StackNavigator, TabNavigator } from "react-navigation";
+//import { StackNavigator, TabNavigator } from "react-navigation";
 
 
 //Import screens
@@ -28,8 +28,39 @@ import Study from  './src/Study';
 import CoachList from  './src/CoachList';
 import EditUser from  './src/EditUser';
 
+
+
+
+export default class App extends React.Component {
+
+
+    render(){
+        return(
+
+            <Route>
+                <Scene key='Study' component={Study} initil/>
+                <Scene key='Coach' component={Coach}/>
+                <Scene key='Goal' component={Goal}/>
+                <Scene key='Time' component={Time}/>
+            </Route>
+
+
+        );
+    }
+
+
+}
+
+
+
+*/
+
+
+
+
+/*
 //Swipe Screen
-var MainScreenNavigator = TabNavigator({
+var Screens = TabNavigator({
     Study: {screen: Study, navigationOptions: { tabBarVisible: false  }},
     Coach: {screen: Coach, navigationOptions: { tabBarVisible: false  }},
     Goal: {screen: Goal, navigationOptions: { tabBarVisible: false  }},
@@ -48,8 +79,18 @@ var MainScreenNavigator = TabNavigator({
 }
 );
 
-MainScreenNavigator.navigationOptions = {
+var Aux_Screens = StackNavigator({
+
+    EditUser: {screen: EditUser},
+    Coachlist: {screen: CoachList},
+    
+
+});
+
+Screens.navigationOptions = {
   title: "Tabs"
 };
 
-export default MainScreenNavigator;
+export default Screens;
+
+*/

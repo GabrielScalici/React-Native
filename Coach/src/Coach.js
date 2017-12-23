@@ -45,9 +45,9 @@ const ball_full = require('./images/ball_full.png');
 
 
 export default class Study extends React.Component {
-    static navigationOption = {
-        tabBarLabel: 'Study'
-    }
+    //static navigationOption = {
+    //    tabBarLabel: 'Study'
+    //}
 
 
     render(){

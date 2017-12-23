@@ -17,9 +17,9 @@ const ball_empty = require('./images/ball_empty.png');
 const ball_full = require('./images/ball_full.png');
 
 export default class Time extends React.Component {
-    static navigationOption = {
-        tabBarLabel: 'Time'
-    }
+    //static navigationOption = {
+    //    tabBarLabel: 'Time'
+    //}
 
 
     render(){

@@ -7,14 +7,18 @@ import{
     Button,
     Image,
     ScrollView,
-    TouchableOpacity,
+    TouchableOpacity
 } from 'react-native';
+
+import { Actions } from 'react-native-router-flux';
+
 
 //Style from css
 import style from './design';
 
 //Languages
 import * as texts from './texts';
+import EditUser from "./EditUser";
 
 
 
@@ -35,9 +39,10 @@ const ball_full = require('./images/ball_full.png');
 
 export default class Study extends React.Component {
 
-    static navigationOption = {
-        tabBarLabel: 'Study'
-    }
+    //static navigationOption = {
+    //    tabBarLabel: 'Study'
+    //}
+
 
 
     render(){
@@ -55,7 +60,7 @@ export default class Study extends React.Component {
                         Gabriel Henrique
                     </Text>
 
-                    <TouchableOpacity onPress={this._onPressButton}>
+                    <TouchableOpacity onPress={() => {Actions.EditUser();}}>
                         <Text style={style.btn_user_edit}>
                             Edit profile
                         </Text>

@@ -14,9 +14,9 @@ import * as texts from './texts';
 
 
 export default class EditUser extends React.Component {
-    static navigationOption = {
-        tabBarLabel: false,
-    }
+    //static navigationOption = {
+    //    tabBarLabel: false,
+    //}
 
 
     render(){
