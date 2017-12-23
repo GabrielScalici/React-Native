@@ -21,9 +21,24 @@ module.exports = StyleSheet.create({
     },
 
     subtitle: {
+        width: 5,
+        height: 5,
         justifyContent: 'center', //externo
-        alignItems: 'center',   //interno
+        alignItems: 'center', //interno
+        flexDirection: 'row',
+        margin: 5,
     },
+
+    image_subtitle: {
+        width: 8,
+        height: 8,
+        margin: 6,
+        justifyContent: 'center',
+        alignItems: 'center',
+
+
+    },
+
 
 
 

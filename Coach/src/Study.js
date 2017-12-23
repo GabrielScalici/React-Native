@@ -16,8 +16,7 @@ import style from './design';
 //Languages
 import * as texts from './texts';
 
-//Components
-import Balls from './components/Balls';
+
 
 
 //images to coach
@@ -28,9 +27,14 @@ const coach4 = require('./images/coach4.png');
 const coach5 = require('./images/coach5.png');
 const coach6 = require('./images/coach6.png');
 
+//images to balls
+const ball_empty = require('./images/ball_empty.png');
+const ball_full = require('./images/ball_full.png');
+
 
 
 export default class Study extends React.Component {
+
     static navigationOption = {
         tabBarLabel: 'Study'
     }
@@ -38,7 +42,6 @@ export default class Study extends React.Component {
 
     render(){
         return (
-
 
             <View style={style.view_study}>
 
@@ -134,7 +137,29 @@ export default class Study extends React.Component {
                 </View>
 
 
-                <Balls />
+                <View style={style.subtitle}>
+
+                    <Image
+                        style={style.image_subtitle}
+                        source={ball_full}
+                    />
+
+                    <Image
+                        style={style.image_subtitle}
+                        source={ball_empty}
+                    />
+
+                    <Image
+                        style={style.image_subtitle}
+                        source={ball_empty}
+                    />
+
+                    <Image
+                        style={style.image_subtitle}
+                        source={ball_empty}
+                    />
+
+                </View>
 
 
             </View>

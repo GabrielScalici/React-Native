@@ -42,7 +42,7 @@ var MainScreenNavigator = TabNavigator({
     //tabBarHeight: 10,
     //tabBarOptions: {
       //  activeTintColor: 'white',
-      //  activeBackgroundColor: '#6E828A',
+      //      activeBackgroundColor: '#6E828A',
     //}
 
 }
