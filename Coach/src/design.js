@@ -4,6 +4,13 @@ module.exports = StyleSheet.create({
 
     //Atuais
     //Strings
+
+    /*
+    --
+    --       BASICS
+    --
+    */
+
     title: {
         fontSize: 45,
         margin: 10,
@@ -11,6 +18,11 @@ module.exports = StyleSheet.create({
         fontFamily: 'verdana',
         justifyContent: 'center',
         marginTop: 60,
+    },
+
+    subtitle: {
+        justifyContent: 'center', //externo
+        alignItems: 'center',   //interno
     },
 
 

@@ -35,6 +35,10 @@ const coach4 = require('./images/coach4.png');
 const coach5 = require('./images/coach5.png');
 const coach6 = require('./images/coach6.png');
 
+//Components
+import Balls from './components/Balls';
+
+
 
 
 
@@ -119,7 +123,7 @@ export default class Study extends React.Component {
                     </ScrollView>
                 </View>
 
-
+                <Balls />
             </View>
         )
 

@@ -16,6 +16,9 @@ import style from './design';
 //Languages
 import * as texts from './texts';
 
+//Components
+import Balls from './components/Balls';
+
 
 //images to coach
 const coach1 = require('./images/coach1.png');
@@ -127,10 +130,11 @@ export default class Study extends React.Component {
 
                         </View>
 
-
-
                     </ScrollView>
                 </View>
+
+
+                <Balls />
 
 
             </View>

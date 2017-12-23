@@ -4,8 +4,6 @@ import React from 'react'
 import{
     Text,
     View,
-    Button,
-    Image
 } from 'react-native';
 
 //Style from css
@@ -13,6 +11,9 @@ import style from './design';
 
 //Languages
 import * as texts from './texts';
+
+//Components
+import Balls from './components/Balls';
 
 
 export default class Time extends React.Component {
@@ -31,7 +32,6 @@ export default class Time extends React.Component {
 
 
             </View>
-
 
         )
 
