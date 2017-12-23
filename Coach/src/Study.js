@@ -37,6 +37,7 @@ const ball_full = require('./images/ball_full.png');
 
 
 
+
 export default class Study extends React.Component {
 
     //static navigationOption = {
@@ -60,12 +61,15 @@ export default class Study extends React.Component {
                         Gabriel Henrique
                     </Text>
 
+                </View>
+
+
+                <View style={style.view_edit_user}>
                     <TouchableOpacity onPress={() => {Actions.EditUser();}}>
                         <Text style={style.btn_user_edit}>
                             Edit profile
                         </Text>
                     </TouchableOpacity>
-
                 </View>
 
 
@@ -141,30 +145,6 @@ export default class Study extends React.Component {
                     </ScrollView>
                 </View>
 
-
-                <View style={style.subtitle}>
-
-                    <Image
-                        style={style.image_subtitle}
-                        source={ball_full}
-                    />
-
-                    <Image
-                        style={style.image_subtitle}
-                        source={ball_empty}
-                    />
-
-                    <Image
-                        style={style.image_subtitle}
-                        source={ball_empty}
-                    />
-
-                    <Image
-                        style={style.image_subtitle}
-                        source={ball_empty}
-                    />
-
-                </View>
 
 
             </View>

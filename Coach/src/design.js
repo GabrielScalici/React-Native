@@ -50,21 +50,28 @@ module.exports = StyleSheet.create({
     */
 
     view_study: {
-        flex: 1,
+        flex: 4,
         justifyContent: 'center', //externo
         alignItems: 'center',   //interno
 
     },
 
     view_head_user: {
-      flex:1,
+      flex:4,
       justifyContent: 'center',
       alignItems: 'center',
 
     },
 
-    view_infos_user: {
+    view_edit_user: {
         flex:1,
+        justifyContent: 'center',
+        alignItems: 'center',
+
+    },
+
+    view_infos_user: {
+        flex:2,
         justifyContent: 'center',
         alignItems: 'center',
         justifyContent: 'space-between',

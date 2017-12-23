@@ -125,34 +125,39 @@ export default class Study extends React.Component {
                     </ScrollView>
                 </View>
 
-                <View style={style.subtitle}>
-
-                    <Image
-                        style={style.image_subtitle}
-                        source={ball_empty}
-                    />
-
-                    <Image
-                        style={style.image_subtitle}
-                        source={ball_full}
-                    />
-
-                    <Image
-                        style={style.image_subtitle}
-                        source={ball_empty}
-                    />
-
-                    <Image
-                        style={style.image_subtitle}
-                        source={ball_empty}
-                    />
-
-                </View>
-
-
-
             </View>
         )
 
     }
 }
+
+
+
+/*
+
+SE PRECISAR VOLTAR AS BOLINAHS DE NAVEGACAO
+
+<View style={style.subtitle}>
+
+    <Image
+        style={style.image_subtitle}
+        source={ball_empty}
+    />
+
+    <Image
+        style={style.image_subtitle}
+        source={ball_full}
+    />
+
+    <Image
+        style={style.image_subtitle}
+        source={ball_empty}
+    />
+
+    <Image
+        style={style.image_subtitle}
+        source={ball_empty}
+    />
+
+</View>
+*/

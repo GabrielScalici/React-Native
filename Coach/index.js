@@ -32,7 +32,11 @@ import Study from  './src/Study';
 import CoachList from  './src/CoachList';
 import EditUser from  './src/EditUser';
 
-
+const TabIcon = ({ selected, title }) => {
+    return (
+        <Text style={{color: selected ? 'red' :'black'}}>{title}</Text>
+    );
+}
 
 export default class app2 extends React.Component {
     render(){
@@ -40,12 +44,23 @@ export default class app2 extends React.Component {
 
             <Router>
                 <Scene key="root">
-                    <Scene key='Study' component={Study} initil />
-                    <Scene key='Coach' component={Coach} />
-                    <Scene key='Goal' component={Goal} />
-                    <Scene key='Time' component={Time} />
+                    <Scene
+                            key="tabbar"
+                            tabs={true}
+                            tabBarStyle={{ backgroundColor: '#FFFFFF' }}
+                            wrap
+                            tabBarPosition='bottom'
+                        >
+                        <Scene key='Study' component={Study} initil />
+                        <Scene key='Coach' component={Coach} />
+                        <Scene key='Goal' component={Goal} />
+                        <Scene key='Time' component={Time} />
+
+                    </Scene>
+
                     <Scene key='EditUser' component={EditUser} />
                     <Scene key='CoachList' component={CoachList} />
+
                 </Scene>
             </Router>
 
