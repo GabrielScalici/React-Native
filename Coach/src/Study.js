@@ -60,7 +60,7 @@ export default class Study extends React.Component {
                             <View style={style.items_coach_user}>
 
                                 <Text style={style.title_infos}>
-                                    Coach
+                                    Coach:
                                 </Text>
                                 <Text style={style.description_infos}>
                                     Yo Ji Sung

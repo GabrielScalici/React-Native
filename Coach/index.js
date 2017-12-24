@@ -10,6 +10,7 @@ import React from 'react';
 import {
     AppRegistry,
     Image,
+    AsyncStorage,
 } from 'react-native';
 
 //Import routers
