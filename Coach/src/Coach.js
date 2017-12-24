@@ -73,17 +73,21 @@ export default class Study extends React.Component {
 
                 <View style={style.view_infos_user}>
                     <ScrollView>
-                        <View style={style.items_infos_coach}>
 
-                            <Text style={style.title_infos}>
-                                Situação:
-                            </Text>
+                        <TouchableOpacity onPress={() => {Actions.StatusList()}}>
+                            <View style={style.items_infos_coach}>
 
-                            <Image
-                                style={style.image_coach_status}
-                                source={normal}
-                            />
-                        </View>
+                                <Text style={style.title_infos}>
+                                    Situação:
+                                </Text>
+
+                                <Image
+                                    style={style.image_coach_status}
+                                    source={normal}
+                                />
+                            </View>
+                        </TouchableOpacity>
+
                         <View style={style.items_infos_coach}>
 
                             <Text style={style.title_infos}>
@@ -93,6 +97,17 @@ export default class Study extends React.Component {
                                 20:00
                             </Text>
                         </View>
+
+                        <View style={style.items_infos_coach}>
+
+                            <Text style={style.title_infos}>
+                                Tempo semanal cumprido:
+                            </Text>
+                            <Text style={style.title_infos}>
+                                00:40
+                            </Text>
+                        </View>
+
 
                     </ScrollView>
                 </View>

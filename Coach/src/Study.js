@@ -42,7 +42,7 @@ export default class Study extends React.Component {
                 <View style={style.view_head_user}>
 
                     <Image
-                        source={require('./images/coach2.png')}
+                        source={coach2}
                         style={style.image_user_study}
                     />
 
@@ -102,16 +102,16 @@ export default class Study extends React.Component {
                             </Text>
 
                         </View>
-                        <View style={style.items_infos_user}>
+                        <TouchableOpacity onPress={() => {Actions.HistoryCoach()}}>
+                            <View style={style.items_infos_user}>
 
-                            <Text style={style.title_infos}>
-                                Tempo de estudo:
-                            </Text>
-                            <Text style={style.title_infos}>
-                                12:00 min
-                            </Text>
+                                <Text style={style.title_infos}>
+                                    Histórico de todos os técnicos
+                                </Text>
 
-                        </View>
+                            </View>
+                        </TouchableOpacity>
+
                         <View style={style.edit_user}>
 
                             <TouchableOpacity onPress={() => {Actions.EditUser()}}>

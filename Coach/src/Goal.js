@@ -18,18 +18,22 @@ export default class Goal extends React.Component {
     //    tabBarLabel: 'Goal',
     //}
     render(){
-        return <View style={
-            {
-                flex: 1,
-                justifyContent: 'center',
-                alignItems: 'center'
+        return (
 
-            }
-        }>
-            <Text style={style.title}>
-                {texts.Goal}
-            </Text>
 
-        </View>
+            <View style={style.view_goal}>
+
+                <View style={style.view_head_user}>
+
+                    <Text style={style.name_user}>
+                        Metas
+                    </Text>
+                </View>
+
+            </View>
+
+
+
+        );
     }
 }

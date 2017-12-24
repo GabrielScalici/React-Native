@@ -133,6 +133,7 @@ module.exports = StyleSheet.create({
         justifyContent: 'center',
     },
 
+
     /*
     --
     --       SCREEN COACH
@@ -194,12 +195,37 @@ module.exports = StyleSheet.create({
 
 
 
+    /*
+    --
+    --       SCREEN GOAL
+    --
+    */
+
+    view_goal: {
+        flex: 1,
+        justifyContent: 'center', //externo
+        alignItems: 'center',   //interno
+        backgroundColor: '#E9E9E5'
+    },
 
     /*
     --
     --       SCREEN TIME
     --
     */
+
+    view_time: {
+        flex: 1,
+        justifyContent: 'center', //externo
+        alignItems: 'center',   //interno
+        backgroundColor: '#E9E9E5'
+    },
+
+
+
+
+
+
 
 
 
