@@ -20,24 +20,14 @@ module.exports = StyleSheet.create({
         marginTop: 60,
     },
 
-    subtitle: {
-        width: 5,
-        height: 5,
-        justifyContent: 'center', //externo
-        alignItems: 'center', //interno
-        flexDirection: 'row',
-        margin: 5,
+    tab_image: {
+        width:20,
+        height:20
     },
 
-    image_subtitle: {
-        width: 8,
-        height: 8,
-        margin: 6,
-        justifyContent: 'center',
-        alignItems: 'center',
 
 
-    },
+
 
 
 
@@ -50,34 +40,28 @@ module.exports = StyleSheet.create({
     */
 
     view_study: {
-        flex: 4,
+        flex: 1,
         justifyContent: 'center', //externo
         alignItems: 'center',   //interno
-
+        backgroundColor: '#E9E9E5'
     },
 
     view_head_user: {
-      flex:4,
+      flex:5,
       justifyContent: 'center',
       alignItems: 'center',
 
     },
 
-    view_edit_user: {
-        flex:1,
-        justifyContent: 'center',
-        alignItems: 'center',
-
-    },
-
     view_infos_user: {
-        flex:2,
+        flex:5,
         justifyContent: 'center',
         alignItems: 'center',
         justifyContent: 'space-between',
         flexDirection: 'row',
-
+        marginTop:10,
     },
+
 
     items_coach_user: {
         flexDirection: 'row',
@@ -87,9 +71,10 @@ module.exports = StyleSheet.create({
         height: 100,
         marginLeft: 20,
         marginRight: 20,
-        borderBottomColor: '#CDE3EB',
+        borderBottomColor: '#9A9B94',
         borderBottomWidth: 1,
     },
+
 
     items_infos_user: {
         flexDirection: 'row',
@@ -99,6 +84,15 @@ module.exports = StyleSheet.create({
         height: 70,
         marginLeft: 20,
         marginRight: 20,
+        borderBottomColor: '#9A9B94',
+        borderBottomWidth: 1,
+    },
+
+    edit_user: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderColor: '#2a4944',
+        height: 60,
         borderBottomColor: '#CDE3EB',
         borderBottomWidth: 1,
     },
@@ -106,22 +100,18 @@ module.exports = StyleSheet.create({
     image_user_study: {
         width: 200,
         height: 200,
-        marginTop: 20,
     },
 
     name_user: {
         fontSize: 30,
-        margin: 10,
         color: '#143A52',
         fontFamily: 'verdana',
         justifyContent: 'center',
-        marginTop: 10,
     },
 
     title_infos: {
         fontSize: 20,
         fontWeight: '100' ,
-        margin: 10,
         color: '#143A52',
         fontFamily: 'verdana',
         justifyContent: 'center',
@@ -155,7 +145,7 @@ module.exports = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center',
         borderColor: '#2a4944',
-        height: 100,
+        height: 80,
         marginLeft: 20,
         marginRight: 20,
     },
@@ -174,6 +164,33 @@ module.exports = StyleSheet.create({
         marginTop: 25,
     },
 
+    items_coach_coach: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        borderColor: '#2a4944',
+        height: 150,
+        marginLeft: 20,
+        marginRight: 20,
+        borderBottomColor: '#9A9B94',
+        borderBottomWidth: 1,
+    },
+
+    view_coach_list: {
+        flex:5,
+        justifyContent: 'center',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        flexDirection: 'row',
+        marginTop:10,
+        backgroundColor: '#E9E9E5'
+    },
+
+    image_coach_status: {
+        width: 80,
+        height: 80,
+        margin: 5
+    },
 
 
 
@@ -183,22 +200,6 @@ module.exports = StyleSheet.create({
     --       SCREEN TIME
     --
     */
-
-    view_time: {
-        flex: 1,
-        justifyContent: 'center', //externo
-        alignItems: 'center',   //interno
-
-    },
-
-    circle: {
-        width: 100,
-        height: 100,
-        borderRadius: 100/2,
-        backgroundColor: 'red'
-    },
-
-
 
 
 

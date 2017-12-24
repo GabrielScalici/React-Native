@@ -23,50 +23,103 @@ const test = () => {
 
 
 export default class CoachList extends React.Component {
-    static navigationOption = {
-        tabBarLabel: 'Study'
-    }
-
-    state = {
-        names: [
-            {'name': 'Benos', 'id': 1},
-            {'name': 'Susan', 'id': 2},
-            {'name': 'Robert', 'id': 3},
-            {'name': 'Mary', 'id': 4},
-            {'name': 'Daniel', 'id': 5},
-            {'name': 'Laura', 'id': 6},
-        ]
-    }
 
     render(){
         return(
 
-            <View>
-                <Text style={style.title}>
+            <View style={style.view_coach_list}>
+                <ScrollView >
+                    <TouchableOpacity onPress={test}>
+                        <View style={style.items_coach_coach}>
 
-                    {texts.Coach}
+                                <Text style={style.names}>
+                                    João
+                                </Text>
 
-                </Text>
+                            <Image
+                                style={{width: 100, height: 100}}
+                                source={require('./images/coach1.png')}
+                            />
 
-                <ScrollView>
-                    {
-                        this.state.names.map((item, index) => (
-                            <View key = {item.id} style = {style.item}>
+                        </View>
+                    </TouchableOpacity>
 
-                                <TouchableOpacity onPress={test}>
-                                    <Text style={style.names}>
-                                        {item.name}
-                                    </Text>
-                                </TouchableOpacity>
+                    <TouchableOpacity onPress={test}>
+                        <View style={style.items_coach_coach}>
 
-                                <Image
-                                    style={{width: 100, height: 100}}
-                                    source={require('./images/coach1.png')}
-                                />
+                            <Text style={style.names}>
+                                Michel
+                            </Text>
 
-                            </View>
-                        ))
-                    }
+                            <Image
+                                style={{width: 100, height: 100}}
+                                source={require('./images/coach2.png')}
+                            />
+
+                        </View>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity onPress={test}>
+                        <View style={style.items_coach_coach}>
+
+                            <Text style={style.names}>
+                                Fábio
+                            </Text>
+
+                            <Image
+                                style={{width: 100, height: 100}}
+                                source={require('./images/coach3.png')}
+                            />
+
+                        </View>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity onPress={test}>
+                        <View style={style.items_coach_coach}>
+
+                            <Text style={style.names}>
+                                William
+                            </Text>
+
+                            <Image
+                                style={{width: 100, height: 100}}
+                                source={require('./images/coach4.png')}
+                            />
+
+                        </View>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity onPress={test}>
+                        <View style={style.items_coach_coach}>
+
+                            <Text style={style.names}>
+                                Rosana
+                            </Text>
+
+                            <Image
+                                style={{width: 100, height: 100}}
+                                source={require('./images/coach5.png')}
+                            />
+
+                        </View>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity onPress={test}>
+                        <View style={style.items_coach_coach}>
+
+                            <Text style={style.names}>
+                                Yo Ji Sung
+                            </Text>
+
+                            <Image
+                                style={{width: 100, height: 100}}
+                                source={require('./images/coach6.png')}
+                            />
+
+                        </View>
+                    </TouchableOpacity>
+
+
                 </ScrollView>
             </View>
         )

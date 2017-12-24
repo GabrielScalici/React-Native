@@ -12,9 +12,6 @@ import style from './design';
 //Languages
 import * as texts from './texts';
 
-//images to balls
-const ball_empty = require('./images/ball_empty.png');
-const ball_full = require('./images/ball_full.png');
 
 export default class Time extends React.Component {
     //static navigationOption = {

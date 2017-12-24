@@ -4,7 +4,6 @@ import React from 'react'
 import{
     Text,
     View,
-    Button,
     Image,
     ScrollView,
     TouchableOpacity
@@ -21,8 +20,6 @@ import * as texts from './texts';
 import EditUser from "./EditUser";
 
 
-
-
 //images to coach
 const coach1 = require('./images/coach1.png');
 const coach2 = require('./images/coach2.png');
@@ -31,20 +28,11 @@ const coach4 = require('./images/coach4.png');
 const coach5 = require('./images/coach5.png');
 const coach6 = require('./images/coach6.png');
 
-//images to balls
-const ball_empty = require('./images/ball_empty.png');
-const ball_full = require('./images/ball_full.png');
 
 
 
 
 export default class Study extends React.Component {
-
-    //static navigationOption = {
-    //    tabBarLabel: 'Study'
-    //}
-
-
 
     render(){
         return (
@@ -57,20 +45,13 @@ export default class Study extends React.Component {
                         source={require('./images/coach2.png')}
                         style={style.image_user_study}
                     />
+
+
                     <Text style={style.name_user}>
                         Gabriel Henrique
                     </Text>
-
                 </View>
 
-
-                <View style={style.view_edit_user}>
-                    <TouchableOpacity onPress={() => {Actions.EditUser();}}>
-                        <Text style={style.btn_user_edit}>
-                            Edit profile
-                        </Text>
-                    </TouchableOpacity>
-                </View>
 
 
                 <View style={style.view_infos_user}>
@@ -86,7 +67,7 @@ export default class Study extends React.Component {
                                 </Text>
                                 <Image
                                     style={{width: 100, height: 100}}
-                                    source={coach5}
+                                    source={coach6}
                                 />
                             </View>
                         </TouchableOpacity>
@@ -104,10 +85,20 @@ export default class Study extends React.Component {
                         <View style={style.items_infos_user}>
 
                             <Text style={style.title_infos}>
-                                Tempo de estudo:
+                                Tempo de estudo semanal:
                             </Text>
                             <Text style={style.title_infos}>
-                                12:00 min
+                                12:00
+                            </Text>
+
+                        </View>
+                        <View style={style.items_infos_user}>
+
+                            <Text style={style.title_infos}>
+                                Tempo de estudo total:
+                            </Text>
+                            <Text style={style.title_infos}>
+                                12:00
                             </Text>
 
                         </View>
@@ -121,32 +112,20 @@ export default class Study extends React.Component {
                             </Text>
 
                         </View>
-                        <View style={style.items_infos_user}>
+                        <View style={style.edit_user}>
 
-                            <Text style={style.title_infos}>
-                                Tempo de estudo:
+                            <TouchableOpacity onPress={() => {Actions.EditUser()}}>
+                            <Text style={style.btn_user_edit}>
+                                Editar usuário
                             </Text>
-                            <Text style={style.title_infos}>
-                                12:00 min
-                            </Text>
-
-                        </View>
-                        <View style={style.items_infos_user}>
-
-                            <Text style={style.title_infos}>
-                                Tempo de estudo:
-                            </Text>
-                            <Text style={style.title_infos}>
-                                12:00 min
-                            </Text>
+                            </TouchableOpacity>
 
                         </View>
 
                     </ScrollView>
+
+
                 </View>
-
-
-
             </View>
         )
 
