@@ -70,6 +70,7 @@ export default class app2 extends React.Component {
                     <Scene key='CoachList' component={CoachList} direction="vertical" title="Escolher Técnico"/>
                     <Scene key='StatusList' component={StatusList} direction="vertical" title="Status"/>
                     <Scene key='HistoryCoach' component={StatusList} direction="vertical" title="History"/>
+                    <Scene key='Register' component={StatusList} direction="vertical" title="Register"/>
 
                 </Scene>
             </Router>
