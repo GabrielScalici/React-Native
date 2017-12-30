@@ -81,4 +81,4 @@ export default class app2 extends React.Component {
 
 
 
-AppRegistry.registerComponent('Coach', () => app2);
+AppRegistry.registerComponent('CoachStudy', () => app2);
