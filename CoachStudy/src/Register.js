@@ -23,13 +23,6 @@ export default class Goal extends React.Component {
 
             <View style={style.view_goal}>
 
-                <View style={style.view_head_user}>
-
-                    <Text style={style.name_user}>
-                        Register
-                    </Text>
-                </View>
-
             </View>
 
 

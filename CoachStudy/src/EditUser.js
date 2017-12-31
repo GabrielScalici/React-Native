@@ -7,6 +7,7 @@ import{
     Image,
     TextInput,
     StyleSheet,
+    TouchableOpacity,
 } from 'react-native';
 
 //imports to TextInput effects
@@ -17,15 +18,19 @@ import style from './design';
 
 //Languages
 import * as texts from './texts';
+import {Actions} from "react-native-router-flux/index";
 
 //temporary image
 const coach2 = require('./images/coach2.png');
 
 export default class EditUser extends React.Component {
-    //static navigationOption = {
-    //    tabBarLabel: false,
-    //}
 
+    constructor(props){
+        super(props);
+
+        //Create states
+        this.state = { nomeUser : 'Gabrielzinho' }
+    }
 
     render(){
         return(
@@ -41,6 +46,11 @@ export default class EditUser extends React.Component {
                     <Text style={style.name_user}>
                         Gabriel Henrique
                     </Text>
+                    <TouchableOpacity onPress={() => {Actions.EditUser()}}>
+                        <Text style={style.btn_user_edit}>
+                            {this.state.nomeUser}
+                        </Text>
+                    </TouchableOpacity>
                 </View>
 
 
