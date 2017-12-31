@@ -28,8 +28,6 @@ export default class EditUser extends React.Component {
     constructor(props){
         super(props);
 
-        //Create states
-        this.state = { nomeUser : 'Gabrielzinho' }
     }
 
     render(){
@@ -43,14 +41,8 @@ export default class EditUser extends React.Component {
                     />
 
 
-                    <Text style={style.name_user}>
-                        Gabriel Henrique
-                    </Text>
-                    <TouchableOpacity onPress={() => {Actions.EditUser()}}>
-                        <Text style={style.btn_user_edit}>
-                            {this.state.nomeUser}
-                        </Text>
-                    </TouchableOpacity>
+
+
                 </View>
 
 
