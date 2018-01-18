@@ -25,7 +25,6 @@ import Goal from  './src/Goal';
 import Time from  './src/Time';
 import Study from  './src/Study';
 import CoachList from  './src/CoachList';
-import EditUser from  './src/EditUser';
 import StatusList from  './src/StatusList';
 import HistoryCoach from  './src/HistoryCoach';
 
@@ -66,7 +65,6 @@ export default class app2 extends React.Component {
 
                     </Scene>
 
-                    <Scene key='EditUser' component={EditUser} direction="vertical" title="Editar Usuário"/>
                     <Scene key='CoachList' component={CoachList} direction="vertical" title="Escolher Técnico"/>
                     <Scene key='StatusList' component={StatusList} direction="vertical" title="Status"/>
                     <Scene key='HistoryCoach' component={HistoryCoach} direction="vertical" title="History"/>

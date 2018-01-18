@@ -17,7 +17,6 @@ import style from './design';
 
 //Languages
 import * as texts from './texts';
-import EditUser from "./EditUser";
 
 
 //images to coach
