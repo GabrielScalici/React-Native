@@ -66,10 +66,10 @@ export default class app2 extends React.Component {
 
                     </Scene>
 
-                    <Scene key='CoachList' component={CoachList} navigationBarStyle={{ backgroundColor: '#143A52'}} direction="vertical" title="Escolher Técnico"/>
-                    <Scene key='StatusList' component={StatusList} navigationBarStyle={{ backgroundColor: '#143A52'}} direction="vertical" title="Status"/>
-                    <Scene key='HistoryCoach' component={HistoryCoach} navigationBarStyle={{ backgroundColor: '#143A52'}} direction="vertical" title="History"/>
-                    <Scene key='EditUser' component={EditUser} navigationBarStyle={{ backgroundColor: '#143A52'}} direction="vertical" title="Edit"/>
+                    <Scene key='CoachList' component={CoachList} hideTabBar navigationBarStyle={{ backgroundColor: 'white'}} titleStyle={style.tab_bar} direction="vertical" title="Escolher Técnico"/>
+                    <Scene key='StatusList' component={StatusList} navigationBarStyle={{ backgroundColor: 'white'}} titleStyle={style.tab_bar} direction="vertical" title="Status do Coach"/>
+                    <Scene key='HistoryCoach' component={HistoryCoach} navigationBarStyle={{ backgroundColor: 'white'}} titleStyle={style.tab_bar} direction="vertical" title="History"/>
+                    <Scene key='EditUser' component={EditUser} navigationBarStyle={{ backgroundColor: 'white'}} titleStyle={style.tab_bar} direction="vertical" title="Editar usuário"/>
 
 
                 </Scene>

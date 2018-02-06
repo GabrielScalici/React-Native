@@ -30,8 +30,8 @@ export default class StatusList extends React.Component {
             <View style={style.view_status_list}>
 
                 <StatusBar
-                    backgroundColor="blue"
-                    barStyle="light-content"
+                    backgroundColor="white"
+                    barStyle="dark-content"
                 />
 
                 <ScrollView>

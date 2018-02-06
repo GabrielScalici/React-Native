@@ -25,7 +25,12 @@ module.exports = StyleSheet.create({
         height:20
     },
 
+    tab_bar: {
+        color: "#143A52",
+        fontFamily: 'verdana',
+        justifyContent: 'center',
 
+    },
 
 
 
@@ -132,6 +137,39 @@ module.exports = StyleSheet.create({
         fontFamily: 'verdana',
         justifyContent: 'center',
     },
+
+
+    /*
+    --
+    --       SCREEN EDIT USER
+    --
+    */
+
+    view_edit_user: {
+        flex: 2,
+        justifyContent: 'center', //externo
+        alignItems: 'center',   //interno
+        backgroundColor: 'white'
+    },
+
+    view_edit_name_user: {
+        flex:2,
+        justifyContent: 'center',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        flexDirection: 'row',
+        marginTop:10,
+    },
+
+    btn_new_photo: {
+        fontSize: 15,
+        fontWeight: '100' ,
+        color: '#143A52',
+        fontFamily: 'verdana',
+        justifyContent: 'center',
+    },
+
+
 
 
     /*
