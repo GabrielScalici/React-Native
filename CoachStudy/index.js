@@ -27,6 +27,7 @@ import Study from  './src/Study';
 import CoachList from  './src/CoachList';
 import StatusList from  './src/StatusList';
 import HistoryCoach from  './src/HistoryCoach';
+import EditUser from  './src/EditUser';
 
 //images icon
 const study_icon = require('./src/images/study.png');
@@ -48,9 +49,9 @@ export default class app2 extends React.Component {
                     <Scene
                         tabs
                         key="tabbar"
-                        activeBackgroundColor='#D4D6C8'
+                        activeBackgroundColor='#F7F7F7'
                         activeTintColor='#E3EFF3'
-                        inactiveBackgroundColor='#E9E9E5'
+                        inactiveBackgroundColor='white'
                         inactiveTintColor='#E3EFF3'
                         tabBarPosition='bottom'
                         navBarButtonColor='black'
@@ -65,9 +66,10 @@ export default class app2 extends React.Component {
 
                     </Scene>
 
-                    <Scene key='CoachList' component={CoachList} direction="vertical" title="Escolher Técnico"/>
-                    <Scene key='StatusList' component={StatusList} direction="vertical" title="Status"/>
-                    <Scene key='HistoryCoach' component={HistoryCoach} direction="vertical" title="History"/>
+                    <Scene key='CoachList' component={CoachList} navigationBarStyle={{ backgroundColor: '#143A52'}} direction="vertical" title="Escolher Técnico"/>
+                    <Scene key='StatusList' component={StatusList} navigationBarStyle={{ backgroundColor: '#143A52'}} direction="vertical" title="Status"/>
+                    <Scene key='HistoryCoach' component={HistoryCoach} navigationBarStyle={{ backgroundColor: '#143A52'}} direction="vertical" title="History"/>
+                    <Scene key='EditUser' component={EditUser} navigationBarStyle={{ backgroundColor: '#143A52'}} direction="vertical" title="Edit"/>
 
 
                 </Scene>

@@ -6,7 +6,8 @@ import{
     View,
     Image,
     ScrollView,
-    TouchableOpacity
+    TouchableOpacity,
+    StatusBar,
 } from 'react-native';
 
 import { Actions } from 'react-native-router-flux';
@@ -37,6 +38,11 @@ export default class Study extends React.Component {
         return (
 
             <View style={style.view_study}>
+
+                <StatusBar
+                    backgroundColor="white"
+                    barStyle="dark-content"
+                />
 
                 <View style={style.view_head_user}>
 

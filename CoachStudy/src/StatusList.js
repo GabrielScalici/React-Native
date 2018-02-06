@@ -3,7 +3,8 @@ import{
     Text,
     View,
     Image,
-    ScrollView
+    ScrollView,
+    StatusBar,
 } from 'react-native';
 
 //Style from css
@@ -26,8 +27,12 @@ export default class StatusList extends React.Component {
     render(){
         return(
 
-            <View style={style.view_coach_list}>
+            <View style={style.view_status_list}>
 
+                <StatusBar
+                    backgroundColor="blue"
+                    barStyle="light-content"
+                />
 
                 <ScrollView>
                     <View style={style.items_coach_coach}>

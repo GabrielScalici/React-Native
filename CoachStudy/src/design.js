@@ -43,7 +43,7 @@ module.exports = StyleSheet.create({
         flex: 1,
         justifyContent: 'center', //externo
         alignItems: 'center',   //interno
-        backgroundColor: '#E9E9E5'
+        backgroundColor: 'white'
     },
 
     view_head_user: {
@@ -184,7 +184,17 @@ module.exports = StyleSheet.create({
         justifyContent: 'space-between',
         flexDirection: 'row',
         marginTop:10,
-        backgroundColor: '#E9E9E5'
+        backgroundColor: 'white'
+    },
+
+    view_status_list: {
+        flex:5,
+        justifyContent: 'center',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        flexDirection: 'row',
+        marginTop:10,
+        backgroundColor: 'white',
     },
 
     image_coach_status: {
@@ -205,7 +215,7 @@ module.exports = StyleSheet.create({
         flex: 1,
         justifyContent: 'center', //externo
         alignItems: 'center',   //interno
-        backgroundColor: '#E9E9E5'
+        backgroundColor: 'white'
     },
 
     /*
@@ -218,56 +228,11 @@ module.exports = StyleSheet.create({
         flex: 1,
         justifyContent: 'center', //externo
         alignItems: 'center',   //interno
-        backgroundColor: '#E9E9E5'
+        backgroundColor: 'white'
     },
 
 
 
-
-
-
-
-
-
-
-    //Antigos
-
-    names: {
-        fontSize: 30,
-        margin: 10,
-        paddingBottom: 50,
-        color: '#143A52',
-        fontFamily: 'verdana',
-        justifyContent: 'center',
-        marginTop: 60,
-    },
-
-    //
-    view_tabBar: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-
-    },
-
-    itens_flatlist: {
-        fontSize: 10,
-        margin: 2,
-        color: '#E3EFF3',
-        fontFamily: 'verdana',
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-
-    item: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        padding:1,
-        margin:1,
-        borderColor: '#2a4944',
-        backgroundColor: '#E3EFF3',
-    }
 
 
 });
