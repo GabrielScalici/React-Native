@@ -9,6 +9,8 @@ import{
     TouchableOpacity,
 } from 'react-native';
 
+import { Isao } from 'react-native-textinput-effects';
+
 //Style from css
 import style from './design';
 
@@ -22,7 +24,6 @@ export default class EditUser extends React.Component {
 
     render(){
         return (
-
 
             <View style={style.view_edit_user}>
 
@@ -38,35 +39,52 @@ export default class EditUser extends React.Component {
                         style={style.image_user_study}
                     />
 
+
                     <TouchableOpacity>
                         <Text style={style.btn_new_photo}>
                             Escolher outra foto
                         </Text>
                     </TouchableOpacity>
 
-
-                </View>
-
-
-                <View style={style.view_edit_name_user}>
-
-
-                    <Text style={style.btn_new_photo}>
-                        Nome:
-                    </Text>
                     <Text style={style.name_user}>
                         Gabriel Henrique
                     </Text>
 
-                </View>
-
-                <View style={style.view_edit_name_user}>
-
-                    <Text style={style.name_user}>
-                        Objetivo:
+                    <Text style={style.btn_new_photo}>
+                        Objetivo de passar em todas as matérias esse semestre!
                     </Text>
 
                 </View>
+
+
+                <View style={style.view_componets}>
+
+                    <Isao
+                        label={'Novo nome'}
+                        // this is applied as active border and label color
+                        activeColor={'#143A52'}
+                        // this is applied as passive border and label color
+                        passiveColor={'#dadada'}
+                    />
+
+                    <Isao
+                        label={'Novo Objetivo'}
+                        // this is applied as active border and label color
+                        activeColor={'#143A52'}
+                        // this is applied as passive border and label color
+                        passiveColor={'#dadada'}
+                    />
+
+                </View>
+
+                <View style={style.view_btn_save_edit}>
+                    <TouchableOpacity>
+                        <Text style={style.btn_save_edit}>
+                            Salvar modificações
+                        </Text>
+                    </TouchableOpacity>
+                </View>
+
             </View>
 
 

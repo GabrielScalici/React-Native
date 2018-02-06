@@ -146,9 +146,9 @@ module.exports = StyleSheet.create({
     */
 
     view_edit_user: {
-        flex: 2,
+        flex: 1,
         justifyContent: 'center', //externo
-        alignItems: 'center',   //interno
+        //alignItems: 'center',   //interno
         backgroundColor: 'white'
     },
 
@@ -160,6 +160,10 @@ module.exports = StyleSheet.create({
         flexDirection: 'row',
         marginTop:10,
     },
+    view_componets:{
+        flex:2,
+        marginTop: 10,
+    },
 
     btn_new_photo: {
         fontSize: 15,
@@ -168,6 +172,23 @@ module.exports = StyleSheet.create({
         fontFamily: 'verdana',
         justifyContent: 'center',
     },
+
+    btn_save_edit: {
+        fontSize: 22,
+        fontWeight: '100' ,
+        color: '#143A52',
+        fontFamily: 'verdana',
+        justifyContent: 'center',
+    },
+
+    view_btn_save_edit: {
+        flex:1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'row',
+        marginTop:10,
+    },
+
 
 
 
