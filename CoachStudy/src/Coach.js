@@ -3,9 +3,6 @@
 //amarelo #FFF176
 //verde #4DB6AC
 
-
-
-
 import React from 'react'
 import{
     Text,

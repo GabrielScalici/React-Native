@@ -16,6 +16,8 @@ import style from './design';
 
 //Languages
 import * as texts from './texts';
+//import actions
+import { Actions } from 'react-native-router-flux';
 
 const coach2 = require('./images/coach2.png');
 
@@ -78,7 +80,7 @@ export default class EditUser extends React.Component {
                 </View>
 
                 <View style={style.view_btn_save_edit}>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => {Actions.FirstScreen()}}>
                         <Text style={style.btn_save_edit}>
                             Salvar modificações
                         </Text>

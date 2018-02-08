@@ -32,9 +32,45 @@ module.exports = StyleSheet.create({
 
     },
 
+    small_text: {
+        fontSize: 15,
+        fontWeight: '100' ,
+        color: '#143A52',
+        fontFamily: 'verdana',
+    },
 
+    /*
+    --
+    --       FIRST SCREEN
+    --
+    */
 
+    btn_enter: {
+        fontSize: 22,
+        fontWeight: '100' ,
+        color: 'white',
+        fontFamily: 'verdana',
+        justifyContent: 'center',
+    },
 
+    view_first_screen: {
+        flex:5,
+        justifyContent: 'center',
+        backgroundColor: 'white',
+
+    },
+
+    view_btn_first_screen: {
+        flex:1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#143A52',
+    },
+
+    image_logo: {
+        width: 200,
+        height: 200,
+    },
 
 
 
@@ -161,7 +197,7 @@ module.exports = StyleSheet.create({
         marginTop:10,
     },
     view_componets:{
-        flex:2,
+        flex:4,
         marginTop: 10,
     },
 
@@ -288,6 +324,17 @@ module.exports = StyleSheet.create({
         justifyContent: 'center', //externo
         alignItems: 'center',   //interno
         backgroundColor: 'white'
+    },
+
+    time_picker: {
+      backgroundColor: '#143A52',
+      color: 'white',
+
+    },
+
+    view_small_text: {
+        justifyContent: 'center',
+        alignItems: 'center',
     },
 
 

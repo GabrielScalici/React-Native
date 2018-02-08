@@ -28,6 +28,8 @@ import CoachList from  './src/CoachList';
 import StatusList from  './src/StatusList';
 import HistoryCoach from  './src/HistoryCoach';
 import EditUser from  './src/EditUser';
+import Login from  './src/Login';
+import FirstScreen from "./src/FirstScreen";
 
 //images icon
 const study_icon = require('./src/images/study.png');
@@ -46,6 +48,7 @@ export default class app2 extends React.Component {
 
             <Router>
                 <Scene key="root">
+                    <Scene key='FirstScreen' component={FirstScreen} hideNavBar direction="vertical" />
                     <Scene
                         tabs
                         key="tabbar"
@@ -70,6 +73,7 @@ export default class app2 extends React.Component {
                     <Scene key='StatusList' component={StatusList} navigationBarStyle={{ backgroundColor: 'white'}} titleStyle={style.tab_bar} direction="vertical" title="Status do Coach"/>
                     <Scene key='HistoryCoach' component={HistoryCoach} navigationBarStyle={{ backgroundColor: 'white'}} titleStyle={style.tab_bar} direction="vertical" title="History"/>
                     <Scene key='EditUser' component={EditUser} navigationBarStyle={{ backgroundColor: 'white'}} titleStyle={style.tab_bar} direction="vertical" title="Editar usuário"/>
+                    <Scene key='Login' component={Login} navigationBarStyle={{ backgroundColor: 'white'}} titleStyle={style.tab_bar} direction="vertical" title="Cadastrar usuário"/>
 
 
                 </Scene>

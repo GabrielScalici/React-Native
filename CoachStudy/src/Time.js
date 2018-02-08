@@ -7,7 +7,7 @@ import{
     Image,
     TouchableOpacity,
     ScrollView,
-    Switch,
+    Picker,
 } from 'react-native';
 
 import { Actions } from 'react-native-router-flux';
@@ -41,9 +41,18 @@ export default class Time extends React.Component {
                     </TouchableOpacity>
                 </View>
 
+
                 <View style={style.view_infos_user}>
                     <ScrollView>
-                        <Switch/>
+                        <View style={style.view_small_text}>
+                            <Text style={style.small_text}>
+                                Como prefere estudar?
+                            </Text>
+                        </View>
+                        <Picker style={style.time_picker}>
+                            <Picker.Item label="Pomodoro" value="pm" />
+                            <Picker.Item label="Cronômetro" value="cr" />
+                        </Picker>
 
                         <View style={style.items_infos_coach}>
 
