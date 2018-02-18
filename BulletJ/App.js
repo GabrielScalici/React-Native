@@ -12,28 +12,41 @@ import {
   View
 } from 'react-native';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+import {Router, Scene, ScrollableTabComponent} from 'react-native-router-flux';
 
-type Props = {};
-export default class App extends Component<Props> {
+//ImportScreens
+import Main from "./src/Main";
+import Week from "./src/Week";
+import Month from "./src/Month";
+import Prior from "./src/Prior";
+
+export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
-      </View>
+      <Router>
+          <Scene key="root">
+              <Scene
+                  tabs
+                  key="tabbar"
+                  swipeEnabled
+                  activeBackgroundColor='#F7F7F7'
+                  activeTintColor='#E3EFF3'
+                  inactiveBackgroundColor='white'
+                  inactiveTintColor='#E3EFF3'
+                  tabBarPosition='bottom'
+                  navBarButtonColor='black'
+                  tabBarStyle={{height:40}}
+                  showLabel={false}
+                  showIcon
+
+              >
+                  <Scene key='Main' component={Main} hideNavBar title="Main"/>
+                  <Scene key='Week' component={Week} hideNavBar title="Week"/>
+                  <Scene key='Month' component={Month} hideNavBar title="Month"/>
+                  <Scene key='Prior' component={Prior} hideNavBar title="Prior"/>
+              </Scene>
+          </Scene>
+      </Router>
     );
   }
 }
