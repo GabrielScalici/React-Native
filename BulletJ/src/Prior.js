@@ -25,11 +25,13 @@ export default class Prior extends Component {
         this.state = {
             noteArray: [],
             noteText: '',
+            noteR: [],
         };
 
+        AsyncStorage.getItem('@MySuperStore:prior_data').then((value) => {
+            this.setState({'noteR': value})});
+
     }
-
-
 
 
     render() {
@@ -38,7 +40,7 @@ export default class Prior extends Component {
             return <Note key={key} keyval={key} val={val} deleteMethod={() => this.deleteNote(key)}/>
         })
 
-
+        
         return (
 
 
@@ -49,7 +51,7 @@ export default class Prior extends Component {
                         Prioridades
                     </Text>
                     <Text style={styles.subtitle}>
-                        15/02 à 19/02
+                        Atividades
                     </Text>
                 </View>
 
@@ -59,6 +61,13 @@ export default class Prior extends Component {
                             <View style={styles.view_btn}>
                                 <Text style={styles.btn_new}>
                                     Adicionar nova tarefa
+                                </Text>
+                            </View>
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={() => this.download()}>
+                            <View style={styles.view_btn}>
+                                <Text style={styles.btn_new}>
+                                    Ver
                                 </Text>
                             </View>
                         </TouchableOpacity>
@@ -80,6 +89,9 @@ export default class Prior extends Component {
                             </View>
                         <TouchableOpacity>
                             {notes}
+                            <Text>
+                                {this.state.noteR}
+                            </Text>
                         </TouchableOpacity>
                     </ScrollView>
                 </View>
@@ -93,9 +105,11 @@ export default class Prior extends Component {
             this.state.noteArray.push({'note' : this.state.noteText});
             this.setState({ noteArray: this.state.noteArray});
             this.setState( {noteText : ''});
+
             try {
                 AsyncStorage.setItem('@MySuperStore:prior_data', JSON.stringify(this.state.noteArray));
                 alert('Armazenado');
+
             } catch (error) {
                 alert('Erro para armazenar');
             }
@@ -110,6 +124,18 @@ export default class Prior extends Component {
     }
 
 
+    download(){
+        try {
+            AsyncStorage.getItem('@MySuperStore:prior_data').then((value) => {
+                this.setState({'noteR': value})});
+
+            //if (noteArray !== null) {
+                console.log(JSON.parse(this.state.noteR));
+            //}
+        } catch (error) {
+            console.log('Error')
+        }
+    }
 
 }
 
