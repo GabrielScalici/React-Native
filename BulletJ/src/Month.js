@@ -154,6 +154,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'gray',
+        height: 60,
     },
     scroll_itens: {
         flexDirection: 'row',

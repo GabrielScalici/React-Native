@@ -18,11 +18,10 @@ export default class Note extends Component {
         return (
 
             <View key={this.props.keyval} style={styles.all}>
-                <Text style={styles.noteText}>{this.props.val.date}</Text>
-                <Text style={styles.noteText}>{this.props.val.note}</Text>
+                <Text style={styles.itens}>{this.props.val.note}</Text>
 
                 <TouchableOpacity onPress={this.props.deleteMethod} style={styles.noteDelete}>
-                    <Text style={styles.noteDeletText}> X </Text>
+                    <Text style={styles.itens_x}> x </Text>
                 </TouchableOpacity>
             </View>
 
@@ -35,9 +34,6 @@ export default class Note extends Component {
 const styles = StyleSheet.create({
     all: {
         position: 'relative',
-        padding: 20,
-        paddingRight: 100,
-        borderBottomWidth: 2,
 
     },
     noteText: {
@@ -49,15 +45,25 @@ const styles = StyleSheet.create({
         position: 'absolute',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'red',
         padding: 10,
         top: 10,
         bottom: 10,
-        right: 10,
+        right: 5,
 
     },
-    noteDeleteText: {
-        color:  'white',
-
+    itens: {
+        fontSize: 30,
+        fontWeight: 'bold',
+        fontFamily: 'verdana',
+        textAlign: 'center',
+        margin: 10,
     },
+    itens_x: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        fontFamily: 'verdana',
+        textAlign: 'center',
+        margin: 10,
+    },
+
 });

@@ -72,6 +72,16 @@ export default class Main extends Component {
                                 5
                             </Text>
                         </View>
+                        <View style={styles.scroll_itens}>
+                            <Text style={styles.name}>
+                                Ajuda com o aplicativo
+                            </Text>
+                        </View>
+                        <View style={styles.scroll_itens}>
+                            <Text style={styles.name}>
+                                Créditos
+                            </Text>
+                        </View>
 
 
                     </ScrollView>
@@ -107,14 +117,14 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontFamily: 'verdana',
         textAlign: 'center',
-        margin: 10,
+        margin: 20,
     },
     hello: {
         fontSize: 30,
         fontWeight: 'bold',
         fontFamily: 'verdana',
         textAlign: 'center',
-        marginTop: 70,
+        marginTop: 60,
     },
     name: {
         fontSize: 30,

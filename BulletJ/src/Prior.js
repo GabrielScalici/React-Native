@@ -6,27 +6,30 @@
 
 import React, { Component } from 'react';
 import {
-    Platform,
     StyleSheet,
     Text,
     View,
     ScrollView,
     TouchableOpacity,
-    TextInput,
+    AsyncStorage,
 } from 'react-native';
 import Note from './Note'
-import { Makiko } from 'react-native-textinput-effects';
-import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
+import { Kaede } from 'react-native-textinput-effects';
 
 
 export default class Prior extends Component {
 
+    constructor(props) {
+        super(props);
 
-    state={
-        noteArray: [],
-        noteText: '',
+        this.state = {
+            noteArray: [],
+            noteText: '',
+        };
 
     }
+
+
 
 
     render() {
@@ -34,6 +37,7 @@ export default class Prior extends Component {
         let notes = this.state.noteArray.map((val, key) => {
             return <Note key={key} keyval={key} val={val} deleteMethod={() => this.deleteNote(key)}/>
         })
+
 
         return (
 
@@ -58,14 +62,25 @@ export default class Prior extends Component {
                                 </Text>
                             </View>
                         </TouchableOpacity>
-                            <View style={styles.view_btn}>
-                                <TextInput style={styles.textInput}
-                                           maxLength = {20}
-                                           onChangeText={(noteText) => this.setState({noteText})} value={this.state.noteText}
-                                    placeholder='Digite Seu texto' placeholderTextColor='white' underlineColorAndroid='transparent'>
-                                </TextInput>
+                            <View>
+                                <Kaede
+                                    onChangeText={(noteText) => this.setState({noteText})} value={this.state.noteText}
+                                    style={styles.input}
+                                    label={'Digite aqui'}
+                                    labelStyle={{
+                                        color: 'white',
+                                        backgroundColor: '#fcb794',
+                                    }}
+                                    inputStyle={{
+                                        color: 'white',
+                                        backgroundColor: '#db8d67',
+                                    }}
+                                    keyboardType="default"
+                                />
                             </View>
-                        {notes}
+                        <TouchableOpacity>
+                            {notes}
+                        </TouchableOpacity>
                     </ScrollView>
                 </View>
             </View>
@@ -75,10 +90,17 @@ export default class Prior extends Component {
 
     addNote(){
         if(this.state.noteText){
-            this.state.noteArray.push({'date':'data', 'note' : this.state.noteText});
+            this.state.noteArray.push({'note' : this.state.noteText});
             this.setState({ noteArray: this.state.noteArray});
             this.setState( {noteText : ''});
+            try {
+                AsyncStorage.setItem('@MySuperStore:prior_data', JSON.stringify(this.state.noteArray));
+                alert('Armazenado');
+            } catch (error) {
+                alert('Erro para armazenar');
+            }
         }
+
     }
 
 
@@ -86,6 +108,8 @@ export default class Prior extends Component {
         this.state.noteArray.splice(key, 1);
         this.setState({ noteArray: this.state.noteArray });
     }
+
+
 
 }
 
@@ -110,6 +134,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'gray',
+        height: 60,
     },
     scroll_itens: {
         flexDirection: 'row',
