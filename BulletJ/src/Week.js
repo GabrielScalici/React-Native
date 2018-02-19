@@ -23,9 +23,6 @@ export default class Week extends Component {
             <View style={styles.all}>
 
                 <View style={styles.view_title}>
-                    <Text style={styles.btn_ajuda}>
-                        Ajuda
-                    </Text>
                     <Text style={styles.title}>
                         Semana
                     </Text>
@@ -169,7 +166,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontFamily: 'verdana',
         textAlign: 'center',
-        marginTop: 0,
+        marginTop: 10,
         marginBottom: 2,
     },
     subtitle: {
@@ -196,12 +193,4 @@ const styles = StyleSheet.create({
         color: 'white',
 
     },
-    btn_ajuda:{
-        fontSize: 15,
-        fontWeight: 'normal',
-        fontFamily: 'verdana',
-        marginTop: 1,
-        marginLeft: 20,
-
-    }
 });
