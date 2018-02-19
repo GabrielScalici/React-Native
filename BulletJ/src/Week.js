@@ -11,7 +11,7 @@ import {
     Text,
     View,
     ScrollView,
-    StatusBar,
+    TouchableOpacity,
 } from 'react-native';
 
 
@@ -22,13 +22,10 @@ export default class Week extends Component {
 
             <View style={styles.all}>
 
-                <StatusBar
-                    backgroundColor="white"
-                    barStyle="dark-content"
-                />
-
-
                 <View style={styles.view_title}>
+                    <Text style={styles.btn_ajuda}>
+                        Ajuda
+                    </Text>
                     <Text style={styles.title}>
                         Semana
                     </Text>
@@ -39,76 +36,97 @@ export default class Week extends Component {
 
                 <View style={styles.view_scroll}>
                     <ScrollView>
-                        <View style={styles.scroll_itens}>
-                            <Text style={styles.itens}>
-                                Conteúdo
-                            </Text>
-                        </View>
-                        <View style={styles.scroll_itens}>
-                            <Text style={styles.itens}>
-                                Conteúdo
-                            </Text>
-                        </View>
-                        <View style={styles.scroll_itens}>
-                            <Text style={styles.itens}>
-                                Conteúdo
-                            </Text>
-                        </View>
-                        <View style={styles.scroll_itens}>
-                            <Text style={styles.itens}>
-                                Conteúdo
-                            </Text>
-                        </View>
-                        <View style={styles.scroll_itens}>
-                            <Text style={styles.itens}>
-                                Conteúdo
-                            </Text>
-                        </View>
-                        <View style={styles.scroll_itens}>
-                            <Text style={styles.itens}>
-                                Conteúdo
-                            </Text>
-                        </View>
-                        <View style={styles.scroll_itens}>
-                            <Text style={styles.itens}>
-                                Conteúdo
-                            </Text>
-                        </View>
-                        <View style={styles.scroll_itens}>
-                            <Text style={styles.itens}>
-                                Conteúdo
-                            </Text>
-                        </View>
-                        <View style={styles.scroll_itens}>
-                            <Text style={styles.itens}>
-                                Conteúdo
-                            </Text>
-                        </View>
-                        <View style={styles.scroll_itens}>
-                            <Text style={styles.itens}>
-                                Conteúdo
-                            </Text>
-                        </View>
-                        <View style={styles.scroll_itens}>
-                            <Text style={styles.itens}>
-                                Conteúdo
-                            </Text>
-                        </View>
-                        <View style={styles.scroll_itens}>
-                            <Text style={styles.itens}>
-                                Conteúdo
-                            </Text>
-                        </View>
-                        <View style={styles.scroll_itens}>
-                            <Text style={styles.itens}>
-                                Conteúdo
-                            </Text>
-                        </View>
-                        <View style={styles.scroll_itens}>
-                            <Text style={styles.itens}>
-                                Conteúdo
-                            </Text>
-                        </View>
+                        <TouchableOpacity>
+                            <View style={styles.view_btn}>
+                                <Text style={styles.btn_new}>
+                                    Adicionar nova tarefa
+                                </Text>
+                            </View>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <View style={styles.scroll_itens}>
+                                <Text style={styles.itens}>
+                                    Conteúdo
+                                </Text>
+                            </View>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <View style={styles.scroll_itens}>
+                                <Text style={styles.itens}>
+                                    Conteúdo
+                                </Text>
+                            </View>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <View style={styles.scroll_itens}>
+                                <Text style={styles.itens}>
+                                    Conteúdo
+                                </Text>
+                            </View>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <View style={styles.scroll_itens}>
+                                <Text style={styles.itens}>
+                                    Conteúdo
+                                </Text>
+                            </View>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <View style={styles.scroll_itens}>
+                                <Text style={styles.itens}>
+                                    Conteúdo
+                                </Text>
+                            </View>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <View style={styles.scroll_itens}>
+                                <Text style={styles.itens}>
+                                    Conteúdo
+                                </Text>
+                            </View>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <View style={styles.scroll_itens}>
+                                <Text style={styles.itens}>
+                                    Conteúdo
+                                </Text>
+                            </View>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <View style={styles.scroll_itens}>
+                                <Text style={styles.itens}>
+                                    Conteúdo
+                                </Text>
+                            </View>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <View style={styles.scroll_itens}>
+                                <Text style={styles.itens}>
+                                    Conteúdo
+                                </Text>
+                            </View>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <View style={styles.scroll_itens}>
+                                <Text style={styles.itens}>
+                                    Conteúdo
+                                </Text>
+                            </View>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <View style={styles.scroll_itens}>
+                                <Text style={styles.itens}>
+                                    Conteúdo
+                                </Text>
+                            </View>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <View style={styles.scroll_itens}>
+                                <Text style={styles.itens}>
+                                    Conteúdo
+                                </Text>
+                            </View>
+                        </TouchableOpacity>
 
                     </ScrollView>
                 </View>
@@ -134,6 +152,12 @@ const styles = StyleSheet.create({
         flex: 5,
         backgroundColor: 'white',
     },
+    view_btn: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'gray',
+    },
     scroll_itens: {
         flexDirection: 'row',
         justifyContent: 'center',
@@ -145,7 +169,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontFamily: 'verdana',
         textAlign: 'center',
-        marginTop: 10,
+        marginTop: 0,
         marginBottom: 2,
     },
     subtitle: {
@@ -163,18 +187,21 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         margin: 10,
     },
-    hello: {
-        fontSize: 30,
-        fontWeight: 'bold',
+    btn_new: {
+        fontSize: 20,
+        fontWeight: 'normal',
         fontFamily: 'verdana',
         textAlign: 'center',
-        marginTop: 70,
+        margin: 5,
+        color: 'white',
+
     },
-    user_name: {
-        fontSize: 30,
-        fontWeight: 'bold',
+    btn_ajuda:{
+        fontSize: 15,
+        fontWeight: 'normal',
         fontFamily: 'verdana',
-        textAlign: 'center',
-        marginBottom: 50,
-    },
+        marginTop: 1,
+        marginLeft: 20,
+
+    }
 });

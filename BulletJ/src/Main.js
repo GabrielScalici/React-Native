@@ -11,6 +11,7 @@ import {
     Text,
     View,
     ScrollView,
+    StatusBar
 } from 'react-native';
 
 
@@ -21,6 +22,12 @@ export default class Main extends Component {
     render() {
         return (
             <View style={styles.all}>
+
+                <StatusBar
+                    backgroundColor="white"
+                    barStyle="dark-content"
+                />
+
                 <View style={styles.view_scroll}>
                     <ScrollView>
 
