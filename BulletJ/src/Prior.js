@@ -16,6 +16,7 @@ import {
 } from 'react-native';
 import Note from './Note'
 import { Makiko } from 'react-native-textinput-effects';
+import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 
 
 export default class Prior extends Component {
