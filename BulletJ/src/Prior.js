@@ -26,8 +26,9 @@ export default class Prior extends Component {
             noteArray: [],
             noteText: '',
             noteR: [],
-            test: '',
+            received: '',
         };
+
 
 
     }
@@ -36,15 +37,19 @@ export default class Prior extends Component {
     /*
         AsyncStorage.getItem('@MySuperStore:prior_data').then((value) => {
             this.setState({'noteR': value})});
+
       */
 
+    this.download_data();
 
-        AsyncStorage.getItem('@MySuperStore:prior_data').then((noteR) => {
-            JSON.parse(noteR)
-        });
 
     }
 
+    download_data() {
+        AsyncStorage.getItem('@MySuperStore:prior_data').then((value) => {
+            this.setState({'noteR': JSON.parse(value)});
+        });
+    }
     render() {
 
 
@@ -55,7 +60,6 @@ export default class Prior extends Component {
         let notes2 = this.state.noteR.map((val, key) => {
             return <Note key={key} keyval={key} val={val} deleteMethod={() => this.deleteNote(key)}/>
         })
-
 
         return (
 
@@ -97,9 +101,9 @@ export default class Prior extends Component {
                                 />
                             </View>
                         <TouchableOpacity>
-                            {notes}
+                            {notes2}
                             <Text>
-                                {this.state.noteR}
+                                {this.state.received}
                             </Text>
                         </TouchableOpacity>
                     </ScrollView>
@@ -110,16 +114,28 @@ export default class Prior extends Component {
     }
 
     addNote(){
+        //Check validation
         if(this.state.noteText){
+
+            //Send to state array
             this.state.noteArray.push({'note' : this.state.noteText});
             this.setState({ noteArray: this.state.noteArray});
+
+            //Clear cache
             this.setState( {noteText : ''});
 
+            //Save data
             try {
                 AsyncStorage.setItem('@MySuperStore:prior_data', JSON.stringify(this.state.noteArray));
             } catch (error) {
+                console.log('Error to save data');
             }
+        }else{
+
+            console.log(this.state.noteR);
         }
+
+
 
     }
 
