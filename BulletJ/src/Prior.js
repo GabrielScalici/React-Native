@@ -26,13 +26,27 @@ export default class Prior extends Component {
             noteArray: [],
             noteText: '',
             noteR: [],
+            test: '',
         };
+
+
+    }
+
+    componentWillMount(){
 
         AsyncStorage.getItem('@MySuperStore:prior_data').then((value) => {
             this.setState({'noteR': value})});
 
-    }
+        /*
+        var value;
 
+        AsyncStorage.getItem('@MySuperStore:prior_data').then((value) => {
+            JSON.parse(value)
+        });
+
+        this.state.noteR.push(value);
+        */
+    }
 
     render() {
 
@@ -40,7 +54,8 @@ export default class Prior extends Component {
             return <Note key={key} keyval={key} val={val} deleteMethod={() => this.deleteNote(key)}/>
         })
 
-        
+
+
         return (
 
 
@@ -61,13 +76,6 @@ export default class Prior extends Component {
                             <View style={styles.view_btn}>
                                 <Text style={styles.btn_new}>
                                     Adicionar nova tarefa
-                                </Text>
-                            </View>
-                        </TouchableOpacity>
-                        <TouchableOpacity onPress={() => this.download()}>
-                            <View style={styles.view_btn}>
-                                <Text style={styles.btn_new}>
-                                    Ver
                                 </Text>
                             </View>
                         </TouchableOpacity>
@@ -121,20 +129,6 @@ export default class Prior extends Component {
     deleteNote(key){
         this.state.noteArray.splice(key, 1);
         this.setState({ noteArray: this.state.noteArray });
-    }
-
-
-    download(){
-        try {
-            AsyncStorage.getItem('@MySuperStore:prior_data').then((value) => {
-                this.setState({'noteR': value})});
-
-            //if (noteArray !== null) {
-                console.log(JSON.parse(this.state.noteR));
-            //}
-        } catch (error) {
-            console.log('Error')
-        }
     }
 
 }
