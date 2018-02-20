@@ -13,7 +13,7 @@ import {
     TouchableOpacity,
     AsyncStorage,
 } from 'react-native';
-import Note from './Note'
+import Note from './Note';
 import { Kaede } from 'react-native-textinput-effects';
 
 
@@ -25,47 +25,43 @@ export default class Prior extends Component {
         this.state = {
             noteArray: [],
             noteText: '',
-            noteR: [],
-            received: '',
         };
-
-
 
     }
 
     componentWillMount(){
-    /*
-        AsyncStorage.getItem('@MySuperStore:prior_data').then((value) => {
-            this.setState({'noteR': value})});
 
-      */
-
-    this.download_data();
-
+        //Update List
+        this.download_data();
 
     }
 
+    //Function to update list
     download_data() {
         AsyncStorage.getItem('@MySuperStore:prior_data').then((value) => {
-            this.setState({'noteR': JSON.parse(value)});
+            this.setState({'noteArray': JSON.parse(value)});
         });
     }
+
+    //Function to save list
+    save_data(){
+        try {
+            AsyncStorage.setItem('@MySuperStore:prior_data', JSON.stringify(this.state.noteArray));
+        } catch (error) {
+            console.log('Error to save data');
+        }
+    }
+
     render() {
 
-
+        //var to show in Note format
         let notes = this.state.noteArray.map((val, key) => {
-            return <Note key={key} keyval={key} val={val} deleteMethod={() => this.deleteNote(key)}/>
-        })
-
-        let notes2 = this.state.noteR.map((val, key) => {
             return <Note key={key} keyval={key} val={val} deleteMethod={() => this.deleteNote(key)}/>
         })
 
         return (
 
-
             <View style={styles.all}>
-
                 <View style={styles.view_title}>
                     <Text style={styles.title}>
                         Prioridades
@@ -74,7 +70,6 @@ export default class Prior extends Component {
                         Atividades
                     </Text>
                 </View>
-
                 <View style={styles.view_scroll}>
                     <ScrollView>
                         <TouchableOpacity onPress={this.addNote.bind(this)}>
@@ -101,18 +96,15 @@ export default class Prior extends Component {
                                 />
                             </View>
                         <TouchableOpacity>
-                            {notes2}
-                            <Text>
-                                {this.state.received}
-                            </Text>
+                            {notes}
                         </TouchableOpacity>
                     </ScrollView>
                 </View>
             </View>
-
         );
     }
 
+    //Add new note
     addNote(){
         //Check validation
         if(this.state.noteText){
@@ -125,28 +117,24 @@ export default class Prior extends Component {
             this.setState( {noteText : ''});
 
             //Save data
-            try {
-                AsyncStorage.setItem('@MySuperStore:prior_data', JSON.stringify(this.state.noteArray));
-            } catch (error) {
-                console.log('Error to save data');
-            }
+            this.save_data();
+
         }else{
-
-            console.log(this.state.noteR);
+            alert('Escreva alguma nota');
         }
-
-
-
     }
 
-
+    //Delete Note
     deleteNote(key){
+        //Delete array
         this.state.noteArray.splice(key, 1);
         this.setState({ noteArray: this.state.noteArray });
+
+        //Save new array
+        this.save_data();
     }
 
 }
-
 
 //Styles
 const styles = StyleSheet.create({
@@ -206,7 +194,6 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         margin: 5,
         color: 'white',
-
     },
     textInput: {
 
