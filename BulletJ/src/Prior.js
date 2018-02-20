@@ -33,27 +33,28 @@ export default class Prior extends Component {
     }
 
     componentWillMount(){
-
+    /*
         AsyncStorage.getItem('@MySuperStore:prior_data').then((value) => {
             this.setState({'noteR': value})});
+      */
 
-        /*
-        var value;
 
-        AsyncStorage.getItem('@MySuperStore:prior_data').then((value) => {
-            JSON.parse(value)
+        AsyncStorage.getItem('@MySuperStore:prior_data').then((noteR) => {
+            JSON.parse(noteR)
         });
 
-        this.state.noteR.push(value);
-        */
     }
 
     render() {
+
 
         let notes = this.state.noteArray.map((val, key) => {
             return <Note key={key} keyval={key} val={val} deleteMethod={() => this.deleteNote(key)}/>
         })
 
+        let notes2 = this.state.noteR.map((val, key) => {
+            return <Note key={key} keyval={key} val={val} deleteMethod={() => this.deleteNote(key)}/>
+        })
 
 
         return (
@@ -116,10 +117,7 @@ export default class Prior extends Component {
 
             try {
                 AsyncStorage.setItem('@MySuperStore:prior_data', JSON.stringify(this.state.noteArray));
-                alert('Armazenado');
-
             } catch (error) {
-                alert('Erro para armazenar');
             }
         }
 
