@@ -1,27 +1,70 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
+ * Gabriel Henrique Campos Scalici
+ * 2018 - FEB
  */
 
 import React, { Component } from 'react';
 import {
-    Platform,
     StyleSheet,
     Text,
     View,
     ScrollView,
     TouchableOpacity,
+    AsyncStorage,
 } from 'react-native';
+import Note from './Note';
+import { Kaede } from 'react-native-textinput-effects';
 
 
 export default class Month extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            noteArrayM: [],
+            noteTextM: '',
+        };
+
+    }
+
+    componentWillMount(){
+
+        //Database exists?
+        AsyncStorage.getItem('@Store:month_data').then((value) => {
+            if (value !== null){
+                this.download_data();
+            }
+        });
+
+    }
+
+    //Function to update list
+    download_data() {
+        AsyncStorage.getItem('@Store:month_data').then((value) => {
+            this.setState({'noteArrayM': JSON.parse(value)});
+        });
+    }
+
+    //Function to save list
+    save_data(){
+        try {
+            AsyncStorage.setItem('@Store:month_data', JSON.stringify(this.state.noteArrayM));
+        } catch (error) {
+            console.log('Error to save data');
+        }
+    }
+
     render() {
+
+        //var to show in Note format
+        let notes = this.state.noteArrayM.map((val, key) => {
+            return <Note key={key} keyval={key} val={val} deleteMethod={() => this.deleteNote(key)}/>
+        })
+
         return (
 
-
             <View style={styles.all}>
-
                 <View style={styles.view_title}>
                     <Text style={styles.title}>
                         Fevereiro
@@ -30,109 +73,71 @@ export default class Month extends Component {
                         Metas
                     </Text>
                 </View>
-
                 <View style={styles.view_scroll}>
                     <ScrollView>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={this.addNote.bind(this)}>
                             <View style={styles.view_btn}>
                                 <Text style={styles.btn_new}>
-                                    Adicionar nova meta
+                                    Adicionar nova tarefa
                                 </Text>
                             </View>
                         </TouchableOpacity>
+                        <View>
+                            <Kaede
+                                onChangeText={(noteTextM) => this.setState({noteTextM})} value={this.state.noteTextM}
+                                style={styles.input}
+                                label={'Digite aqui'}
+                                labelStyle={{
+                                    color: 'white',
+                                    backgroundColor: '#fcb794',
+                                }}
+                                inputStyle={{
+                                    color: 'white',
+                                    backgroundColor: '#db8d67',
+                                }}
+                                keyboardType="default"
+                            />
+                        </View>
                         <TouchableOpacity>
-                            <View style={styles.scroll_itens}>
-                                <Text style={styles.itens}>
-                                    Assistir UCL
-                                </Text>
-                            </View>
+                            {notes}
                         </TouchableOpacity>
-                        <TouchableOpacity>
-                            <View style={styles.scroll_itens}>
-                                <Text style={styles.itens}>
-                                    Estudar Cálculo 2
-                                </Text>
-                            </View>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <View style={styles.scroll_itens}>
-                                <Text style={styles.itens}>
-                                    Estudar Inglês
-                                </Text>
-                            </View>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <View style={styles.scroll_itens}>
-                                <Text style={styles.itens}>
-                                    Terminar App
-                                </Text>
-                            </View>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <View style={styles.scroll_itens}>
-                                <Text style={styles.itens}>
-                                    Ver The walking dead
-                                </Text>
-                            </View>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <View style={styles.scroll_itens}>
-                                <Text style={styles.itens}>
-                                    Terminar matrícula
-                                </Text>
-                            </View>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <View style={styles.scroll_itens}>
-                                <Text style={styles.itens}>
-                                    Terminar relatório
-                                </Text>
-                            </View>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <View style={styles.scroll_itens}>
-                                <Text style={styles.itens}>
-                                    Escrever capítulo 3
-                                </Text>
-                            </View>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <View style={styles.scroll_itens}>
-                                <Text style={styles.itens}>
-                                    Trocar película
-                                </Text>
-                            </View>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <View style={styles.scroll_itens}>
-                                <Text style={styles.itens}>
-                                    Conteúdo
-                                </Text>
-                            </View>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <View style={styles.scroll_itens}>
-                                <Text style={styles.itens}>
-                                    Conteúdo
-                                </Text>
-                            </View>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <View style={styles.scroll_itens}>
-                                <Text style={styles.itens}>
-                                    Conteúdo
-                                </Text>
-                            </View>
-                        </TouchableOpacity>
-
                     </ScrollView>
                 </View>
             </View>
-
         );
     }
-}
 
+    //Add new note
+    addNote(){
+        //Check validation
+        if(this.state.noteTextM){
+
+            //Send to state array
+            this.state.noteArrayM.push({'note' : this.state.noteTextM});
+            this.setState({ noteArrayM: this.state.noteArrayM});
+
+            //Clear cache
+            this.setState( {noteTextM : ''});
+
+            //Save data
+            this.save_data();
+
+        }else{
+            alert('Escreva alguma nota');
+        }
+    }
+
+    //Delete Note
+    deleteNote(key){
+        //Delete array
+        this.state.noteArrayM.splice(key, 1);
+        this.setState({ noteArrayM: this.state.noteArrayM });
+
+        //Save new array
+        this.save_data();
+    }
+
+}
 
 //Styles
 const styles = StyleSheet.create({
@@ -192,6 +197,11 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         margin: 5,
         color: 'white',
+    },
+    textInput: {
+
+        color: 'white',
+        padding: 20,
 
     },
 });

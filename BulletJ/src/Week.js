@@ -1,138 +1,144 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
+ * Gabriel Henrique Campos Scalici
+ * 2018 - FEB
  */
 
 import React, { Component } from 'react';
 import {
-    Platform,
     StyleSheet,
     Text,
     View,
     ScrollView,
     TouchableOpacity,
+    AsyncStorage,
 } from 'react-native';
+import Note from './Note';
+import { Kaede } from 'react-native-textinput-effects';
 
 
 export default class Week extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            noteArrayW: [],
+            noteTextW: '',
+        };
+
+    }
+
+    componentWillMount(){
+
+        //Database exists?
+        AsyncStorage.getItem('@Store:week_data').then((value) => {
+            if (value !== null){
+                this.download_data();
+            }
+        });
+
+
+    }
+
+    //Function to update list
+    download_data() {
+        AsyncStorage.getItem('@MySuperStore:week_data').then((value) => {
+            this.setState({'noteArrayW': JSON.parse(value)});
+        });
+    }
+
+    //Function to save list
+    save_data(){
+        try {
+            AsyncStorage.setItem('@MySuperStore:week_data', JSON.stringify(this.state.noteArrayW));
+        } catch (error) {
+            console.log('Error to save data');
+        }
+    }
+
     render() {
+
+        //var to show in Note format
+        let notes = this.state.noteArrayW.map((val, key) => {
+            return <Note key={key} keyval={key} val={val} deleteMethod={() => this.deleteNote(key)}/>
+        })
+
         return (
 
-
             <View style={styles.all}>
-
                 <View style={styles.view_title}>
                     <Text style={styles.title}>
                         Semana
                     </Text>
                     <Text style={styles.subtitle}>
-                        15/02 à 19/02
+                        05/02 - 12/02
                     </Text>
                 </View>
-
                 <View style={styles.view_scroll}>
                     <ScrollView>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={this.addNote.bind(this)}>
                             <View style={styles.view_btn}>
                                 <Text style={styles.btn_new}>
                                     Adicionar nova tarefa
                                 </Text>
                             </View>
                         </TouchableOpacity>
+                        <View>
+                            <Kaede
+                                onChangeText={(noteTextW) => this.setState({noteTextW})} value={this.state.noteTextW}
+                                style={styles.input}
+                                label={'Digite aqui'}
+                                labelStyle={{
+                                    color: 'white',
+                                    backgroundColor: '#fcb794',
+                                }}
+                                inputStyle={{
+                                    color: 'white',
+                                    backgroundColor: '#db8d67',
+                                }}
+                                keyboardType="default"
+                            />
+                        </View>
                         <TouchableOpacity>
-                            <View style={styles.scroll_itens}>
-                                <Text style={styles.itens}>
-                                    Conteúdo
-                                </Text>
-                            </View>
+                            {notes}
                         </TouchableOpacity>
-                        <TouchableOpacity>
-                            <View style={styles.scroll_itens}>
-                                <Text style={styles.itens}>
-                                    Conteúdo
-                                </Text>
-                            </View>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <View style={styles.scroll_itens}>
-                                <Text style={styles.itens}>
-                                    Conteúdo
-                                </Text>
-                            </View>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <View style={styles.scroll_itens}>
-                                <Text style={styles.itens}>
-                                    Conteúdo
-                                </Text>
-                            </View>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <View style={styles.scroll_itens}>
-                                <Text style={styles.itens}>
-                                    Conteúdo
-                                </Text>
-                            </View>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <View style={styles.scroll_itens}>
-                                <Text style={styles.itens}>
-                                    Conteúdo
-                                </Text>
-                            </View>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <View style={styles.scroll_itens}>
-                                <Text style={styles.itens}>
-                                    Conteúdo
-                                </Text>
-                            </View>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <View style={styles.scroll_itens}>
-                                <Text style={styles.itens}>
-                                    Conteúdo
-                                </Text>
-                            </View>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <View style={styles.scroll_itens}>
-                                <Text style={styles.itens}>
-                                    Conteúdo
-                                </Text>
-                            </View>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <View style={styles.scroll_itens}>
-                                <Text style={styles.itens}>
-                                    Conteúdo
-                                </Text>
-                            </View>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <View style={styles.scroll_itens}>
-                                <Text style={styles.itens}>
-                                    Conteúdo
-                                </Text>
-                            </View>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <View style={styles.scroll_itens}>
-                                <Text style={styles.itens}>
-                                    Conteúdo
-                                </Text>
-                            </View>
-                        </TouchableOpacity>
-
                     </ScrollView>
                 </View>
             </View>
-
         );
     }
-}
 
+    //Add new note
+    addNote(){
+        //Check validation
+        if(this.state.noteTextW){
+
+            //Send to state array
+            this.state.noteArrayW.push({'note' : this.state.noteTextW});
+            this.setState({ noteArrayW: this.state.noteArrayW});
+
+            //Clear cache
+            this.setState( {noteTextW : ''});
+
+            //Save data
+            this.save_data();
+
+        }else{
+            alert('Escreva alguma nota');
+        }
+    }
+
+    //Delete Note
+    deleteNote(key){
+        //Delete array
+        this.state.noteArrayW.splice(key, 1);
+        this.setState({ noteArrayW: this.state.noteArrayW });
+
+        //Save new array
+        this.save_data();
+    }
+
+}
 
 //Styles
 const styles = StyleSheet.create({
@@ -192,6 +198,11 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         margin: 5,
         color: 'white',
+    },
+    textInput: {
+
+        color: 'white',
+        padding: 20,
 
     },
 });

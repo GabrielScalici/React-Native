@@ -12,29 +12,23 @@ import {
     TouchableOpacity,
 } from 'react-native';
 
-
 export default class Note extends Component {
     render() {
         return (
 
             <View key={this.props.keyval} style={styles.all}>
-
                 <Text style={styles.itens}>
                     {this.props.val.note}
                 </Text>
-
                 <TouchableOpacity onPress={this.props.deleteMethod} style={styles.noteDelete}>
                     <Text style={styles.itens_x}>
                         x
                     </Text>
                 </TouchableOpacity>
-
             </View>
-
         );
     }
 }
-
 
 //Styles
 const styles = StyleSheet.create({

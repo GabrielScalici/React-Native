@@ -1,7 +1,6 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
+ * Gabriel Henrique Campos Scalici
+ * 2018 - FEB
  */
 
 import React, { Component } from 'react';
@@ -31,14 +30,18 @@ export default class Prior extends Component {
 
     componentWillMount(){
 
-        //Update List
-        this.download_data();
+        //Database exists?
+        AsyncStorage.getItem('prior_data').then((value) => {
+            if (value !== null){
+                this.download_data();
+            }
+        });
 
     }
 
     //Function to update list
     download_data() {
-        AsyncStorage.getItem('@MySuperStore:prior_data').then((value) => {
+        AsyncStorage.getItem('@Store:prior_data').then((value) => {
             this.setState({'noteArray': JSON.parse(value)});
         });
     }
@@ -46,7 +49,7 @@ export default class Prior extends Component {
     //Function to save list
     save_data(){
         try {
-            AsyncStorage.setItem('@MySuperStore:prior_data', JSON.stringify(this.state.noteArray));
+            AsyncStorage.setItem('@Store:prior_data', JSON.stringify(this.state.noteArray));
         } catch (error) {
             console.log('Error to save data');
         }
