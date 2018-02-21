@@ -42,7 +42,7 @@ export default class Week extends Component {
 
     //Function to update list
     download_data() {
-        AsyncStorage.getItem('@MySuperStore:week_data').then((value) => {
+        AsyncStorage.getItem('@Store:week_data').then((value) => {
             this.setState({'noteArrayW': JSON.parse(value)});
         });
     }
@@ -50,7 +50,7 @@ export default class Week extends Component {
     //Function to save list
     save_data(){
         try {
-            AsyncStorage.setItem('@MySuperStore:week_data', JSON.stringify(this.state.noteArrayW));
+            AsyncStorage.setItem('@Store:week_data', JSON.stringify(this.state.noteArrayW));
         } catch (error) {
             console.log('Error to save data');
         }
