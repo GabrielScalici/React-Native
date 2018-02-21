@@ -14,6 +14,7 @@ import {
 } from 'react-native';
 import Note from './Note';
 import { Kaede } from 'react-native-textinput-effects';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 
 export default class Week extends Component {
@@ -68,7 +69,7 @@ export default class Week extends Component {
             <View style={styles.all}>
                 <View style={styles.view_title}>
                     <Text style={styles.title}>
-                        Semana
+                        Semana <Icon name="ios-trash" size={20} color="gray" />
                     </Text>
                     <Text style={styles.subtitle}>
                         05/02 - 12/02

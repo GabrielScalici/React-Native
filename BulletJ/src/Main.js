@@ -15,8 +15,61 @@ import {
 } from 'react-native';
 
 
+
 export default class Main extends Component {
+
+    componentWillMount(){
+
+
+
+    }
+
+    constructor(props) {
+        super(props);
+
+
+    }
+
+
+    Month_In_Text(month){
+        if(month == 1){
+            return 'Janeiro';
+        }else if(month == 2){
+            return 'Fevereiro';
+        }else if(month == 3){
+            return 'Março';
+        }else if(month == 4){
+            return  'Abril';
+        }else if(month == 5){
+            return  'Maio';
+        }else if(month == 6){
+            return  'Junho';
+        }else if(month == 7){
+            return  'Julho';
+        }else if(month == 8){
+            monthText = 'Agosto';
+        }else if(month == 9){
+            return  'Setembro';
+        }else if(month == 10){
+            return 'Outubro';
+        }else if(month == 11){
+            return 'Novembro';
+        }else if(month == 12){
+            return 'Dezembro';
+        }
+    }
+
+
     render() {
+
+        var date = new Date().getDate();
+        var month = new Date().getMonth() + 1;
+        var year = new Date().getFullYear();
+        var monthText = '';
+
+        monthText = this.Month_In_Text(month);
+
+
         return (
             <View style={styles.all}>
 
@@ -30,12 +83,22 @@ export default class Main extends Component {
 
                         <View style={styles.scroll_itens}>
                             <Text style={styles.hello}>
-                                Olá,
+                                Olá
                             </Text>
                         </View>
                         <View style={styles.scroll_itens}>
                             <Text style={styles.name}>
                                 Gabriel Henrique
+                            </Text>
+                        </View>
+                        <View style={styles.scroll_itens}>
+                            <Text style={styles.hello}>
+                                Hoje é
+                            </Text>
+                        </View>
+                        <View style={styles.scroll_itens}>
+                            <Text style={styles.name}>
+                                {date + ' de ' + monthText + ' de ' + year}
                             </Text>
                         </View>
 
@@ -70,8 +133,8 @@ export default class Main extends Component {
                             </Text>
                         </View>
                         <View style={styles.scroll_itens}>
-                            <Text style={styles.name}>
-                                Ajuda com o aplicativo
+                            <Text style={styles.hello}>
+                                Ajuda com o app
                             </Text>
                         </View>
                         <View style={styles.scroll_itens}>

@@ -11,19 +11,18 @@ import {
     View,
     TouchableOpacity,
 } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 export default class Note extends Component {
     render() {
         return (
 
             <View key={this.props.keyval} style={styles.all}>
-                <Text style={styles.itens}>
-                    {this.props.val.note}
-                </Text>
-                <TouchableOpacity onPress={this.props.deleteMethod} style={styles.noteDelete}>
-                    <Text style={styles.itens_x}>
-                        x
+                    <Text style={styles.itens}>
+                        {this.props.val.note}
                     </Text>
+                <TouchableOpacity onPress={this.props.deleteMethod} style={styles.noteDelete}>
+                    <Icon name="ios-add" size={20} color="gray" />
                 </TouchableOpacity>
             </View>
         );

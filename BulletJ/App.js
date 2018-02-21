@@ -21,6 +21,7 @@ import Main from "./src/Main";
 import Week from "./src/Week";
 import Month from "./src/Month";
 import Prior from "./src/Prior";
+import History from "./src/HistoryWeek";
 
 export default class App extends React.Component {
   render() {
@@ -53,7 +54,7 @@ export const MainTabNavigator = TabNavigator({
 
     },
     animationEnabled: false,
-    swipeEnabled: true,
+    swipeEnabled: false,
     tabBarLabel: {
       focused: true,
         tintColor: 'black',

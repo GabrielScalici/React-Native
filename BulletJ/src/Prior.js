@@ -11,9 +11,12 @@ import {
     ScrollView,
     TouchableOpacity,
     AsyncStorage,
+    TouchableHighlight,
 } from 'react-native';
 import Note from './Note';
 import { Kaede } from 'react-native-textinput-effects';
+import Interactable from 'react-native-interactable';
+import Swipeable from 'react-native-swipeable';
 
 
 export default class Prior extends Component {
@@ -31,13 +34,15 @@ export default class Prior extends Component {
     componentWillMount(){
 
         //Database exists?
-        AsyncStorage.getItem('prior_data').then((value) => {
+        AsyncStorage.getItem('@Store:prior_data').then((value) => {
             if (value !== null){
                 this.download_data();
             }
         });
 
     }
+
+
 
     //Function to update list
     download_data() {
@@ -55,12 +60,15 @@ export default class Prior extends Component {
         }
     }
 
+
+
     render() {
 
         //var to show in Note format
         let notes = this.state.noteArray.map((val, key) => {
             return <Note key={key} keyval={key} val={val} deleteMethod={() => this.deleteNote(key)}/>
         })
+
 
         return (
 
@@ -98,9 +106,7 @@ export default class Prior extends Component {
                                     keyboardType="default"
                                 />
                             </View>
-                        <TouchableOpacity>
                             {notes}
-                        </TouchableOpacity>
                     </ScrollView>
                 </View>
             </View>
