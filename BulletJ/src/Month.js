@@ -98,9 +98,7 @@ export default class Month extends Component {
                                 keyboardType="default"
                             />
                         </View>
-                        <TouchableOpacity>
                             {notes}
-                        </TouchableOpacity>
                     </ScrollView>
                 </View>
             </View>
@@ -149,10 +147,12 @@ const styles = StyleSheet.create({
     view_title: {
         flex: 1,
         backgroundColor: 'white',
+        marginTop:10,
     },
     view_scroll: {
         flex: 5,
         backgroundColor: 'white',
+        marginTop: 1,
     },
     view_btn: {
         flexDirection: 'row',

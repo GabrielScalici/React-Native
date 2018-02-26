@@ -155,10 +155,12 @@ const styles = StyleSheet.create({
     view_title: {
         flex: 1,
         backgroundColor: 'white',
+        marginTop:10,
     },
     view_scroll: {
         flex: 5,
         backgroundColor: 'white',
+        marginTop: 1,
     },
     view_btn: {
         flexDirection: 'row',
@@ -166,6 +168,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: 'gray',
         height: 60,
+        marginBottom: 0,
+        marginTop: 0,
     },
     scroll_itens: {
         flexDirection: 'row',
