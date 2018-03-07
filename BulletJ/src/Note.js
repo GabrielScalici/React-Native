@@ -61,11 +61,11 @@ export default class Note extends Component {
         return (
 
             <Swipeable leftContent={leftContent} rightButtons={rightButtons} rightButtonWidth={60}>
-            <View key={this.props.keyval} style={styles.all}>
-                    <Text style={styles.itens}>
-                        {this.props.val.note}
-                    </Text>
-            </View>
+                <View key={this.props.keyval} style={styles.all}>
+                        <Text style={styles.itens}>
+                            {this.props.val.note}
+                        </Text>
+                </View>
             </Swipeable>
         );
     }
