@@ -6,7 +6,11 @@ import{
     View,
     Image,
     TouchableOpacity,
+    StatusBar,
 } from 'react-native';
+
+//Degrade
+import LinearGradient from 'react-native-linear-gradient';
 
 //Style from css
 import style from './design';
@@ -16,7 +20,7 @@ import * as texts from './texts';
 import {Actions} from "react-native-router-flux";
 
 //images
-const logo = require('./images/icon.png');
+const logo = require('./images/Logo_Fundo.png');
 
 
 export default class FirstScreen extends React.Component {
@@ -27,16 +31,20 @@ export default class FirstScreen extends React.Component {
         return (
 
 
-            <View style={style.view_first_screen}>
-
-                <View style={{alignItems: 'center'}}>
+            <LinearGradient colors={['#ffb300', '#ffa000', '#ff8f00']} style={style.view_first_screen}>
+                <StatusBar
+                    backgroundColor="transparent"
+                    barStyle="light-content"
+                    hidden
+                />
+{/*             <View style={{alignItems: 'center'}}>
                     <Text style={style.small_text}>
                         Criado por:
                     </Text>
                     <Text style={style.small_text}>
                         Gabriel Henrique Campos Scalici
                     </Text>
-                </View>
+                </View>*/}
 
                 <View style={style.view_head_user}>
 
@@ -45,12 +53,11 @@ export default class FirstScreen extends React.Component {
                         style={style.image_logo}
                     />
 
-                    <Text style={style.name_user}>
-                        Study Coach
-                    </Text>
+
+
                 </View>
 
-                <View style={style.view_btn_first_screen}>
+                  <View style={style.view_btn_first_screen}>
                     <TouchableOpacity onPress={() => {Actions.Study()}}>
                         <View>
                         <Text style={style.btn_enter}>
@@ -58,9 +65,9 @@ export default class FirstScreen extends React.Component {
                         </Text>
                         </View>
                     </TouchableOpacity>
-                </View>
+                    </View>
 
-            </View>
+            </LinearGradient>
 
 
 

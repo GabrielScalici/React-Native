@@ -33,12 +33,12 @@ export default class CoachList extends React.Component {
                         <View style={style.items_coach_coach}>
 
                                 <Text style={style.names}>
-                                    João
+                                    Batman
                                 </Text>
 
                             <Image
                                 style={{width: 100, height: 100}}
-                                source={require('./images/coach1.png')}
+                                source={require('./images/batman_circle_light.png')}
                             />
 
                         </View>
@@ -48,12 +48,12 @@ export default class CoachList extends React.Component {
                         <View style={style.items_coach_coach}>
 
                             <Text style={style.names}>
-                                Michel
+                                Chaplin
                             </Text>
 
                             <Image
                                 style={{width: 100, height: 100}}
-                                source={require('./images/coach2.png')}
+                                source={require('./images/chaplin_simple_light.png')}
                             />
 
                         </View>
@@ -63,12 +63,12 @@ export default class CoachList extends React.Component {
                         <View style={style.items_coach_coach}>
 
                             <Text style={style.names}>
-                                Fábio
+                                Trump
                             </Text>
 
                             <Image
                                 style={{width: 100, height: 100}}
-                                source={require('./images/coach3.png')}
+                                source={require('./images/trump_simple_light.png')}
                             />
 
                         </View>
@@ -78,12 +78,12 @@ export default class CoachList extends React.Component {
                         <View style={style.items_coach_coach}>
 
                             <Text style={style.names}>
-                                William
+                                Indian
                             </Text>
 
                             <Image
                                 style={{width: 100, height: 100}}
-                                source={require('./images/coach4.png')}
+                                source={require('./images/indian_simple_light.png')}
                             />
 
                         </View>
@@ -93,12 +93,12 @@ export default class CoachList extends React.Component {
                         <View style={style.items_coach_coach}>
 
                             <Text style={style.names}>
-                                Rosana
+                                Cristiano Ronaldo
                             </Text>
 
                             <Image
                                 style={{width: 100, height: 100}}
-                                source={require('./images/coach5.png')}
+                                source={require('./images/cr7_simple_light.png')}
                             />
 
                         </View>
@@ -108,12 +108,27 @@ export default class CoachList extends React.Component {
                         <View style={style.items_coach_coach}>
 
                             <Text style={style.names}>
-                                Yo Ji Sung
+                                Robot
                             </Text>
 
                             <Image
                                 style={{width: 100, height: 100}}
-                                source={require('./images/coach6.png')}
+                                source={require('./images/robot_simple_light.png')}
+                            />
+
+                        </View>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity onPress={test}>
+                        <View style={style.items_coach_coach}>
+
+                            <Text style={style.names}>
+                                Nativo
+                            </Text>
+
+                            <Image
+                                style={{width: 100, height: 100}}
+                                source={require('./images/native_simple_light.png')}
                             />
 
                         </View>

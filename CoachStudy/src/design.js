@@ -68,8 +68,8 @@ module.exports = StyleSheet.create({
     },
 
     image_logo: {
-        width: 200,
-        height: 200,
+        width: 300,
+        height: 300,
     },
 
 
@@ -335,6 +335,7 @@ module.exports = StyleSheet.create({
     view_small_text: {
         justifyContent: 'center',
         alignItems: 'center',
+        //color: '#373739'
     },
 
 

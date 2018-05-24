@@ -31,7 +31,7 @@ const coach2 = require('./images/coach2.png');
 const coach3 = require('./images/coach3.png');
 const coach4 = require('./images/coach4.png');
 const coach5 = require('./images/coach5.png');
-const coach6 = require('./images/coach6.png');
+const batman = require('./images/batman_circle_light.png');
 
 
 
@@ -52,11 +52,11 @@ export default class Study extends React.Component {
                 <View style={style.view_head_user}>
 
                     <Image
-                        source={coach5}
+                        source={batman}
                         style={style.image_user_coach}
                     />
                     <Text style={style.name_user}>
-                        Yo Ji Sung
+                        Batman
                     </Text>
 
                     <TouchableOpacity onPress={() => {Actions.CoachList()}}>

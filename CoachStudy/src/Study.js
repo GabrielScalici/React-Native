@@ -22,11 +22,11 @@ import * as texts from './texts';
 
 //images to coach
 const coach1 = require('./images/coach1.png');
-const coach2 = require('./images/coach2.png');
+const felipe = require('./images/felipe_simple_light.png');
 const coach3 = require('./images/coach3.png');
 const coach4 = require('./images/coach4.png');
 const coach5 = require('./images/coach5.png');
-const coach6 = require('./images/coach6.png');
+const batman = require('./images/batman_circle_light.png');
 
 
 
@@ -47,13 +47,13 @@ export default class Study extends React.Component {
                 <View style={style.view_head_user}>
 
                     <Image
-                        source={coach2}
+                        source={felipe}
                         style={style.image_user_study}
                     />
 
 
                     <Text style={style.name_user}>
-                        Gabriel Henrique
+                        Felipe Custódio
                     </Text>
                 </View>
 
@@ -68,11 +68,11 @@ export default class Study extends React.Component {
                                     Coach:
                                 </Text>
                                 <Text style={style.description_infos}>
-                                    Yo Ji Sung
+                                    Batman
                                 </Text>
                                 <Image
-                                    style={{width: 100, height: 100}}
-                                    source={coach6}
+                                    style={{width: 90, height: 90}}
+                                    source={batman}
                                 />
                             </View>
                         </TouchableOpacity>
