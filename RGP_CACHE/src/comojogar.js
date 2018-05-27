@@ -14,6 +14,8 @@ import {
 
 } from 'react-native';
 
+import { Actions } from 'react-native-router-flux';
+
 
 //BIBLIOTECAS UTILIZADAS PARA OS ICONES (VECTOR-ICONS)
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -83,9 +85,9 @@ export default class comojogar extends Component<Props> {
                         <View style={styles.itens}>
                             <Text style={styles.title2_aux}> recuperar vidas  </Text>
                         </View>
-                        <View style={styles.btn_enter}>
+                        <TouchableOpacity style={styles.btn_enter} onPress={() => Actions.pop()}>
                             <Text style={styles.title}> Entendi </Text>
-                        </View>
+                        </TouchableOpacity>
 
                         <View>
                             <Text style={styles.subtitle_end}> Uma aventura pela memória cache </Text>

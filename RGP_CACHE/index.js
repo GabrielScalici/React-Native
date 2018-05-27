@@ -21,7 +21,7 @@ const App = () => {
                 <Scene key="splash"
                        component={Splash}
                        hideNavBar
-                       //initial
+                       initial
                 />
                 <Scene key="home"
                        component={Home}
@@ -32,7 +32,7 @@ const App = () => {
                     key="comojogar"
                     component={Comojogar}
                     hideNavBar
-                    initial
+
 
                 />
                 <Scene

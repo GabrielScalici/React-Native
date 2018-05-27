@@ -8,11 +8,12 @@ import {
     Text,
     View,
     StatusBar,
-    TouchableNativeFeedback,
+    TouchableOpacity,
     Image,
 
 } from 'react-native';
 
+import { Actions } from 'react-native-router-flux';
 
 //BIBLIOTECAS UTILIZADAS PARA OS ICONES (VECTOR-ICONS)
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -36,6 +37,12 @@ export default class cache extends Component<Props> {
 
                 <View style={styles.body_container}>
 
+
+
+
+                    <TouchableOpacity style={styles.btn_enter} onPress={() => Actions.pop()}>
+                        <Text style={styles.title}> Entendi </Text>
+                    </TouchableOpacity>
                 </View>
 
                 <View>
@@ -111,5 +118,10 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginHorizontal: 20,
         color: '#2c5b7f',
+    },
+    btn_enter: {
+        backgroundColor: '#cf6180',
+        height: 80,
+        marginVertical: 20,
     },
 });
