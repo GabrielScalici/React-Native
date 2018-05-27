@@ -8,7 +8,7 @@ import {
     Text,
     View,
     StatusBar,
-    TouchableNativeFeedback,
+    TouchableOpacity,
     Image,
     ScrollView,
 
@@ -46,8 +46,8 @@ export default class comojogar extends Component<Props> {
                             <Text style={styles.title2}> Leia atentamente </Text>
                         </View>
                         <View style={styles.itens}>
-                            <MaterialIcons name="image-filter-none" size={40} color='#70577b'> </MaterialIcons>
-                            <Text style={styles.title2}> Lembre decisões passadas </Text>
+                            <MaterialIcons name="book" size={40} color='#70577b'> </MaterialIcons>
+                            <Text style={styles.title2}> Lembre do caminho </Text>
                         </View>
                         <View style={styles.itens}>
                             <MaterialIcons name="sms" size={40} color='#70577b'> </MaterialIcons>
@@ -60,6 +60,35 @@ export default class comojogar extends Component<Props> {
                         <View style={styles.itens}>
                             <MaterialIcons name="toc" size={40} color='#70577b'> </MaterialIcons>
                             <Text style={styles.title2}> Olhe as alternativas </Text>
+                        </View>
+                        <View style={styles.itens}>
+                            <MaterialIcons name="schedule" size={40} color='#70577b'> </MaterialIcons>
+                            <Text style={styles.title2}> Tome sua decisão </Text>
+                        </View>
+                        <View style={styles.itens}>
+                            <MaterialIcons name="done" size={40} color='#70577b'> </MaterialIcons>
+                            <Text style={styles.title2}> Continue caso acerte  </Text>
+                        </View>
+                        <View style={styles.itens}>
+                            <MaterialIcons name="clear" size={40} color='#70577b'> </MaterialIcons>
+                            <Text style={styles.title2}> Ou perca uma vida  </Text>
+                        </View>
+                        <View style={styles.itens}>
+                            <Text style={styles.title2}> Bônus!! </Text>
+                        </View>
+                        <View style={styles.itens}>
+                            <MaterialIcons name="favorite" size={40} color='#70577b'> </MaterialIcons>
+                            <Text style={styles.title2}> Responda desafios para  </Text>
+                        </View>
+                        <View style={styles.itens}>
+                            <Text style={styles.title2_aux}> recuperar vidas  </Text>
+                        </View>
+                        <View style={styles.btn_enter}>
+                            <Text style={styles.title}> Entendi </Text>
+                        </View>
+
+                        <View>
+                            <Text style={styles.subtitle_end}> Uma aventura pela memória cache </Text>
                         </View>
 
 
@@ -122,7 +151,6 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 35,
         textAlign: 'center',
-        marginHorizontal: 10,
         paddingTop: 10,
         paddingHorizontal: 10,
         color: 'white',
@@ -132,17 +160,29 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginVertical: 15,
         color: '#70577b',
+        marginLeft: 8,
+    },
+    title2_aux: {
+        fontSize: 29,
+        textAlign: 'center',
+        color: '#70577b',
+        marginLeft: 60,
     },
     itens: {
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'space-between',
+        //justifyContent: 'space-between',
         marginLeft: 20,
     },
     subtitle_end: {
         fontSize: 18,
         textAlign: 'center',
         marginHorizontal: 20,
-        color: '#2c5b7f',
+        color: '#70577b',
+    },
+    btn_enter: {
+        backgroundColor: '#70577b',
+        height: 80,
+        marginVertical: 20,
     },
 });
