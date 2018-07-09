@@ -1,12 +1,10 @@
 export default {
 
-    primaria: 'ffa000',
+    primaria: '#FFA000',
 
-    gradient1: 'ffb300',
-    gradient2: 'ff8f00',
+    gradient1: '#ffb300',
+    gradient2: '#ff8f00',
 
     white: 'white',
-
-
 
 }

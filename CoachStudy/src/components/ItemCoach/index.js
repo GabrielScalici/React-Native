@@ -4,10 +4,6 @@ import {View, Text, TouchableOpacity, Image} from 'react-native';
 
 import styles from './styles';
 
-const test = () => {
-    alert('Test');
-};
-
 let photo;
 
 const CoachList = (props) => {

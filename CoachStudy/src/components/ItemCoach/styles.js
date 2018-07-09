@@ -15,8 +15,8 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
     },
     title:{
-        fontSize: 20,
-        color: 'black',
+        fontSize: font.titleList,
+        color: colors.primaria,
     },
     image:{
         width: 100,

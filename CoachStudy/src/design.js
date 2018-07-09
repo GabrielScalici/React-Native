@@ -145,7 +145,7 @@ module.exports = StyleSheet.create({
 
     name_user: {
         fontSize: 30,
-        color: '#143A52',
+        color: '#ff8f00',
         fontFamily: 'verdana',
         justifyContent: 'center',
     },
