@@ -1,5 +1,3 @@
-
-
 import React from 'react'
 import{
     Text,
@@ -17,10 +15,12 @@ import style from './design';
 //Languages
 import * as texts from './texts';
 
+//Custom Components
+import ItemCoach from './components/ItemCoach';
+
 const test = () => {
     alert('Test');
-}
-
+};
 
 export default class CoachList extends React.Component {
 
@@ -29,111 +29,48 @@ export default class CoachList extends React.Component {
 
             <View style={style.view_coach_list}>
                 <ScrollView >
-                    <TouchableOpacity onPress={test}>
-                        <View style={style.items_coach_coach}>
 
-                                <Text style={style.names}>
-                                    Batman
-                                </Text>
+                    <ItemCoach
+                        name={'Batman'}
+                        onPress={() => alert('Teste')}
+                        ImageS={'batman'}
+                    />
 
-                            <Image
-                                style={{width: 100, height: 100}}
-                                source={require('./images/batman_circle_light.png')}
-                            />
+                    <ItemCoach
+                        name={'Chaplin'}
+                        onPress={() => alert('Teste')}
+                        ImageS={'chaplin'}
+                    />
 
-                        </View>
-                    </TouchableOpacity>
+                    <ItemCoach
+                        name={'Trump'}
+                        onPress={() => alert('Teste')}
+                        ImageS={'trump'}
+                    />
 
-                    <TouchableOpacity onPress={test}>
-                        <View style={style.items_coach_coach}>
+                    <ItemCoach
+                        name={'Indian'}
+                        onPress={() => alert('Teste')}
+                        ImageS={'indian'}
+                    />
 
-                            <Text style={style.names}>
-                                Chaplin
-                            </Text>
+                    <ItemCoach
+                        name={'Cristiano Ronaldo'}
+                        onPress={() => alert('Teste')}
+                        ImageS={'cr7'}
+                    />
 
-                            <Image
-                                style={{width: 100, height: 100}}
-                                source={require('./images/chaplin_simple_light.png')}
-                            />
+                    <ItemCoach
+                        name={'Robô'}
+                        onPress={() => alert('Teste')}
+                        ImageS={'robot'}
+                    />
 
-                        </View>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity onPress={test}>
-                        <View style={style.items_coach_coach}>
-
-                            <Text style={style.names}>
-                                Trump
-                            </Text>
-
-                            <Image
-                                style={{width: 100, height: 100}}
-                                source={require('./images/trump_simple_light.png')}
-                            />
-
-                        </View>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity onPress={test}>
-                        <View style={style.items_coach_coach}>
-
-                            <Text style={style.names}>
-                                Indian
-                            </Text>
-
-                            <Image
-                                style={{width: 100, height: 100}}
-                                source={require('./images/indian_simple_light.png')}
-                            />
-
-                        </View>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity onPress={test}>
-                        <View style={style.items_coach_coach}>
-
-                            <Text style={style.names}>
-                                Cristiano Ronaldo
-                            </Text>
-
-                            <Image
-                                style={{width: 100, height: 100}}
-                                source={require('./images/cr7_simple_light.png')}
-                            />
-
-                        </View>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity onPress={test}>
-                        <View style={style.items_coach_coach}>
-
-                            <Text style={style.names}>
-                                Robot
-                            </Text>
-
-                            <Image
-                                style={{width: 100, height: 100}}
-                                source={require('./images/robot_simple_light.png')}
-                            />
-
-                        </View>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity onPress={test}>
-                        <View style={style.items_coach_coach}>
-
-                            <Text style={style.names}>
-                                Nativo
-                            </Text>
-
-                            <Image
-                                style={{width: 100, height: 100}}
-                                source={require('./images/native_simple_light.png')}
-                            />
-
-                        </View>
-                    </TouchableOpacity>
-
+                    <ItemCoach
+                        name={'Nativo'}
+                        onPress={() => alert('Teste')}
+                        ImageS={'native'}
+                    />
 
                 </ScrollView>
             </View>

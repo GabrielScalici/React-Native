@@ -54,7 +54,6 @@ export default class FirstScreen extends React.Component {
                     />
 
 
-
                 </View>
 
                   <View style={style.view_btn_first_screen}>
