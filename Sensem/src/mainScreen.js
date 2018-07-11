@@ -6,6 +6,7 @@ import {
 } from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
+import {Icon, Header, Left, Container, Content} from 'native-base';
 
 export default class mainScreen extends Component<Props> {
 
@@ -25,11 +26,19 @@ export default class mainScreen extends Component<Props> {
 
     render() {
         return (
-            <View style={styles.container}>
-                <Text style={styles.welcome}>
-                    Main Screen
-                </Text>
-            </View>
+            <Container>
+                <Header>
+                    <Left>
+                        <Icon name={"ios-menu"} onPress={() => this.props.navigation.navigate('DrawerOpen')} />
+                    </Left>
+                </Header>
+                <Content contentContainertyle={{ flex: 1}} >
+                    <Text> Olá </Text>
+
+                </Content>
+
+
+            </Container>
 
         );
     }
