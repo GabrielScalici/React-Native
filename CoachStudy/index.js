@@ -37,9 +37,6 @@ const coach_icon = require('./src/images/coach.png');
 const goal_icon = require('./src/images/goal.png');
 const time_icon =  require('./src/images/time.png');
 
-
-
-
 import Icon from  './src/images/study.png';
 
 export default class app2 extends React.Component {
