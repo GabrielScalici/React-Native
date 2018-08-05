@@ -73,16 +73,9 @@ export default class Time extends React.Component {
                                 00:40
                             </Text>
                         </View>
-
-
                     </ScrollView>
                 </View>
-
-
             </View>
-
-
-
 
         );
 

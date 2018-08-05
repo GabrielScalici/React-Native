@@ -272,16 +272,6 @@ module.exports = StyleSheet.create({
         borderBottomWidth: 1,
     },
 
-    view_coach_list: {
-        flex:5,
-        justifyContent: 'center',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        flexDirection: 'row',
-        marginTop:10,
-        backgroundColor: 'white'
-    },
-
     view_status_list: {
         flex:5,
         justifyContent: 'center',

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {View, Text, TouchableOpacity, Image} from 'react-native';
+import {View, Text, TouchableOpacity, Image, Modal} from 'react-native';
 
 import styles from './styles';
 
@@ -31,7 +31,7 @@ const CoachList = (props) => {
     }
 
     return (
-        <TouchableOpacity onPress={props.onPress}>
+        <TouchableOpacity onPress={() => this.setState({modal:true})}>
             <View style={styles.container}>
 
                 <Text style={styles.title}>
@@ -44,6 +44,7 @@ const CoachList = (props) => {
                 />
 
             </View>
+            
         </TouchableOpacity>
     )
 };

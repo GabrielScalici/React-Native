@@ -1,12 +1,8 @@
 import React from 'react'
 import{
-    Text,
     View,
-    Button,
-    Image,
     ScrollView,
-    StyleSheet,
-    TouchableOpacity
+    StyleSheet
 } from 'react-native';
 
 //Style from css
@@ -27,7 +23,7 @@ export default class CoachList extends React.Component {
     render(){
         return(
 
-            <View style={style.view_coach_list}>
+            <View style={styles.container}>
                 <ScrollView >
 
                     <ItemCoach
@@ -78,3 +74,15 @@ export default class CoachList extends React.Component {
 
     }
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex:5,
+        justifyContent: 'center',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        flexDirection: 'row',
+        marginTop:10,
+        backgroundColor: 'white'
+    }
+});
