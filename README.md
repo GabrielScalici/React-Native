@@ -1,2 +1,4 @@
 # React-Native
-Projetos usando React Native
+
+Estudos utilizando React-native
+
