@@ -1,5 +1,8 @@
 export default {
-    primaria: 'red',
+    primaria: 'tomato',
     secundaria: 'black',
-    teciaria: 'orange'
+    teciaria: 'orange',
+
+    cinza_claro: '#f6f6f6',
+    cinza: 'gray',
 };
