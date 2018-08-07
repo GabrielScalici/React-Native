@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+
 import {metrics, font, colors } from '../styles';
+
+import ListCoach from '../components/ListCoach';
+
+const batman = require('../../img/avatar/batman@256px.png');
 
 class Coach extends Component {
     constructor(props) {
@@ -13,6 +18,15 @@ class Coach extends Component {
                 <Text style={styles.title}>
                     Coach
                 </Text>
+                <TouchableOpacity>
+                    <Text style={styles.text_escolher_tecnico}>Escolher técnico</Text>
+                </TouchableOpacity>
+
+                <ListCoach
+                    img = {batman}
+                    name = {"Batman"}
+                />  
+
             </View>
         );
     }
@@ -23,6 +37,10 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: font.title,
+    },
+    text_escolher_tecnico: {
+        color: colors.primaria,
+        fontSize: font.btn_pequeno
     }
 })
 
