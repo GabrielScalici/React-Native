@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-
 import {metrics, font, colors } from '../styles';
-
-import ListCoach from '../components/ListCoach';
-
-const batman = require('../../img/avatar/batman@256px.png');
 
 class Coach extends Component {
     constructor(props) {
@@ -18,14 +13,9 @@ class Coach extends Component {
                 <Text style={styles.title}>
                     Coach
                 </Text>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate("listaCoach")}>
                     <Text style={styles.text_escolher_tecnico}>Escolher técnico</Text>
                 </TouchableOpacity>
-
-                <ListCoach
-                    img = {batman}
-                    name = {"Batman"}
-                />  
 
             </View>
         );

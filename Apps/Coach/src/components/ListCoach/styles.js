@@ -5,8 +5,9 @@ import { metrics, colors, font } from '../../styles';
 const styles = StyleSheet.create({
     container:{
         flexDirection: 'row',
-        justifyContent: 'space-around',
+        justifyContent: 'space-between',
         alignItems: 'center',
+        padding: metrics.padding,
     },
     title: {
         fontSize: font.title,
@@ -17,6 +18,9 @@ const styles = StyleSheet.create({
         width: metrics.avatarW,
         borderRadius: metrics.avatarR,
         backgroundColor: colors.cinza_claro 
+    },
+    arrow: {
+        color: colors.primaria
     }
 });
 

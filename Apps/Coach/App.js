@@ -1,12 +1,17 @@
-import React, {Component} from 'react';
-import { createBottomTabNavigator } from 'react-navigation';
+import { StackNavigator } from 'react-navigation';
 
-import { metrics, colors } from './src/styles';
+//Import das telas
+import tabBar from './src/nav/tabBar';
+import listaCoach from './src/screens/listaCoach';
 
-import Estudar from './src/model/Estudar';
-import Perfil from './src/model/Perfil';
+// Manifest of possible screens
+const PrimaryNav = StackNavigator({
+    tabBar: { screen: tabBar },
+    listaCoach: { screen: listaCoach },
 
-export default createBottomTabNavigator({
-  Estudar: Estudar,
-  Perfil: Perfil,
+}, {
+    initialRouteName: 'tabBar',
+    headerMode: 'none',
 });
+
+export default PrimaryNav

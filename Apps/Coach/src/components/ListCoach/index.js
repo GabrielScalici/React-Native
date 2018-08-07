@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { Image, View, TouchableOpacity, Text } from 'react-native';
+import { Image, TouchableOpacity, Text } from 'react-native';
+import Icon from 'react-native-vector-icons/SimpleLineIcons';
 
 import styles from './styles';
+import { font } from '../../styles';
 
 class ListCoach extends Component {
     
@@ -11,13 +13,14 @@ class ListCoach extends Component {
     }
     render() {
         return (
-            <View style={styles.container}> 
-                <Text style={styles.title}> {this.props.name} </Text>
+            <TouchableOpacity style={styles.container}> 
                 <Image
                     style={styles.photo}
                     source={this.props.img}
                 />
-            </View>
+                <Text style={styles.title}> {this.props.name} </Text>
+                <Icon style={styles.arrow} name={"arrow-right"} size={font.icon}/>
+            </TouchableOpacity>
         );
     }
 }
