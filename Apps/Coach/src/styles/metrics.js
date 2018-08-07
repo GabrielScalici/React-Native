@@ -1,3 +1,5 @@
+import { Platform } from 'react-native';
+
 export default {
     
     padding: 15,
@@ -8,4 +10,8 @@ export default {
     avatarW: 80,
     avatarR: 100,
 
+    ...Platform.select({
+        ios: { headerHeight: 74, headerPadding: 20 },
+        android: { headerHeight: 54, headerPadding: 0 },
+    }),
 };

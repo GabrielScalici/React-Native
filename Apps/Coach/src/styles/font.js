@@ -7,4 +7,6 @@ export default {
     btn_grande: 20,
 
     icon: 30,
+
+    header: 25,
 };

@@ -5,6 +5,7 @@ export default {
 
     cinza_claro: '#f6f6f6',
     cinza: 'gray',
+    branco: '#ffffff',
 
     background_claro: 'white',
     background_dark: 'black',
