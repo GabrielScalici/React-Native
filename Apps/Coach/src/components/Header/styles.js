@@ -14,8 +14,20 @@ const styles = StyleSheet.create({
         borderBottomWidth: 2,
         borderBottomColor: colors.cinza_claro
     },
+    container_back:{
+        flexDirection: "row",
+        height: metrics.headerHeight,
+        paddingTop: metrics.headerPadding,
+        paddingHorizontal: metrics.padding,
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        backgroundColor: colors.branco,
+        borderBottomWidth: 2,
+        borderBottomColor: colors.cinza_claro
+    },
     title:{
         fontSize: font.header,
+        color: colors.primaria,
     },
 
 });

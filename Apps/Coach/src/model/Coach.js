@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import {metrics, font, colors } from '../styles';
 
+//COMPONENTES
+import Header from '../components/Header';
+
 class Coach extends Component {
     constructor(props) {
         super(props);
@@ -10,9 +13,9 @@ class Coach extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.title}>
-                    Coach
-                </Text>
+
+                <Header> Técnico </Header>
+
                 <TouchableOpacity onPress={() => this.props.navigation.navigate("listaCoach")}>
                     <Text style={styles.text_escolher_tecnico}>Escolher técnico</Text>
                 </TouchableOpacity>
@@ -24,9 +27,6 @@ class Coach extends Component {
 const styles = StyleSheet.create({
     container: {    
         flex: 1,
-    },
-    title: {
-        fontSize: font.title,
     },
     text_escolher_tecnico: {
         color: colors.primaria,

@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import {metrics, font, colors } from '../styles';
 
+//COMPONENTES
+import Header from '../components/Header';
+
 class Estudar extends Component {
     constructor(props) {
         super(props);
@@ -10,9 +13,7 @@ class Estudar extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.title}>
-                    Estudar
-                </Text>
+                <Header> Estudar </Header>
             </View>
         );
     }
@@ -21,9 +22,6 @@ const styles = StyleSheet.create({
     container: {    
         flex: 1,
     },
-    title: {
-        fontSize: font.title,
-    }
 })
 
 export default Estudar;

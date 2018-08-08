@@ -3,7 +3,8 @@ import { View, StyleSheet, Text, ScrollView } from 'react-native';
 
 import { metrics, font, colors } from '../styles'; 
 
-//componentes
+//COMPONENTES
+import Header from '../components/Header';
 import ListCoach from '../components/ListCoach';
 
 //Fotos dos tecnicos
@@ -22,6 +23,10 @@ class listaCoach extends Component {
     render() {
         return (
             <View style={styles.container}>
+                <Header 
+                    back 
+                    onPress={() => { this.props.navigation.goBack(null); }}
+                    > Escolha seu técnico </Header>
                 <ScrollView>
                     <ListCoach
                         img = {batman}

@@ -20,7 +20,7 @@ export default createBottomTabNavigator({
 },
 {
     navigationOptions: ({ navigation }) => ({
-        tabBarIcon: ({ focused, tintColor }) => {
+      tabBarIcon: ({ focused, tintColor }) => {
           const { routeName } = navigation.state;
           let iconName;
           if (routeName === 'Perfil') {
@@ -41,6 +41,7 @@ export default createBottomTabNavigator({
         },
       }),
 
+    
     tabBarOptions: {
         activeTintColor: colors.primaria,
         inactiveTintColor: colors.cinza,
