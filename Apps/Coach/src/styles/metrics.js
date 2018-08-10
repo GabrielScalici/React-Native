@@ -10,6 +10,11 @@ export default {
     avatarW: 80,
     avatarR: 100,
 
+    profilePhotoH: 200,
+    profilePhotoW: 200,
+    profilePhotoR: 100,
+
+
     ...Platform.select({
         ios: { headerHeight: 74, headerPadding: 20 },
         android: { headerHeight: 54, headerPadding: 0 },

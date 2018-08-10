@@ -4,6 +4,10 @@ import {metrics, font, colors } from '../styles';
 
 //COMPONENTES
 import Header from '../components/Header';
+import ViewPhoto from '../components/ViewPhoto';
+
+//FOTO 
+const photo_coach = require('../../img/avatar/barack-obama@256px.png');
 
 class Coach extends Component {
     constructor(props) {
@@ -15,6 +19,10 @@ class Coach extends Component {
             <View style={styles.container}>
 
                 <Header> Técnico </Header>
+
+                <ViewPhoto
+                    source={photo_coach}
+                />
 
                 <TouchableOpacity onPress={() => this.props.navigation.navigate("listaCoach")}>
                     <Text style={styles.text_escolher_tecnico}>Escolher técnico</Text>
