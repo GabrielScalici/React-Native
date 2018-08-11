@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Text, ScrollView } from 'react-native';
 
-import { metrics, font, colors } from '../styles'; 
+import { metrics, font, colors } from '../styles';
 
 //COMPONENTES
 import Header from '../components/Header';
@@ -14,43 +14,54 @@ const chaplin = require('../../img/avatar/charlie-chaplin@256px.png');
 const cr7 = require('../../img/avatar/cristiano-ronaldo@256px.png');
 const gandhi = require('../../img/avatar/mahatma-gandhi@256px.png');
 const robot = require('../../img/avatar/robot-01@256px.png');
+const african = require('../../img/avatar/traditional-african-woman@256px.png');
+const japanese = require('../../img/avatar/traditional-japanese-woman@256px.png');
 
 class listaCoach extends Component {
     constructor(props) {
         super(props);
-        this.state = {  };
+        this.state = {};
     }
     render() {
         return (
             <View style={styles.container}>
-                <Header 
-                    back 
+                <Header
+                    back
                     onPress={() => { this.props.navigation.goBack(null); }}
-                    > Escolha seu técnico </Header>
+                > Escolha seu técnico </Header>
                 <ScrollView>
+
                     <ListCoach
-                        img = {batman}
-                        name = {"Batman"}
+                        img={batman}
+                        name={"Batman"}
                     />
                     <ListCoach
-                        img = {obama}
-                        name = {"Obama"} 
-                    />  
-                    <ListCoach
-                        img = {chaplin}
-                        name = {"Chaplin"} 
+                        img={obama}
+                        name={"Obama"}
                     />
                     <ListCoach
-                        img = {cr7}
-                        name = {"Cristiano R."} 
+                        img={chaplin}
+                        name={"Chaplin"}
                     />
                     <ListCoach
-                        img = {gandhi}
-                        name = {"Gandhi"} 
+                        img={cr7}
+                        name={"Cristiano R."}
                     />
                     <ListCoach
-                        img = {robot}
-                        name = {"Robô"} 
+                        img={gandhi}
+                        name={"Gandhi"}
+                    />
+                    <ListCoach
+                        img={robot}
+                        name={"Robô"}
+                    />
+                    <ListCoach
+                        img={african}
+                        name={"Princesa africana"}
+                    />
+                    <ListCoach
+                        img={japanese}
+                        name={"Atriz"}
                     />
                 </ScrollView>
             </View>

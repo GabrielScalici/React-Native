@@ -13,7 +13,7 @@ class ListCoach extends Component {
     }
     render() {
         return (
-            <TouchableOpacity style={styles.container}> 
+            <TouchableOpacity onPress={this.props.onPress} style={styles.container}> 
                 <Image
                     style={styles.photo}
                     source={this.props.img}
