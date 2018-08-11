@@ -21,6 +21,8 @@ class Coach extends Component {
                 <Header> Técnico </Header>
 
                 <ViewPhoto
+                    color1={ colors.primaria }
+                    color2={ colors.teciaria }
                     source={photo_coach}
                 />
 

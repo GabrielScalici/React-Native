@@ -4,6 +4,9 @@ import {metrics, font, colors } from '../styles';
 
 //COMPONENTES
 import Header from '../components/Header';
+import ViewPhoto from '../components/ViewPhoto';
+
+const photo_user = require('../../img/user/eu.jpg');
 
 class Perfil extends Component {
     constructor(props) {
@@ -14,6 +17,13 @@ class Perfil extends Component {
         return (
             <View style={styles.container}>
                 <Header> Perfil </Header>
+                
+                <ViewPhoto
+                    color1={colors.primaria}
+                    color2={colors.teciaria}
+                    source={photo_user}
+                />
+
             </View>
         );
     }

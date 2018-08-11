@@ -4,14 +4,19 @@ import { metrics, font, colors } from '../../styles';
 
 const styles = StyleSheet.create({
     container: {
-        padding: metric.double_padding,
-
+        padding: metrics.double_padding,
+        justifyContent: 'center',
+        alignItems: 'center',
 
     },
     photo:{
         height: metrics.profilePhotoH, 
         width: metrics.profilePhotoW,
-        borderRadius: metrics.profilePhotoR,
+        //borderRadius: metrics.profilePhotoR,
+        //backgroundColor: colors.cinza_claro,
+        borderWidth: 2,
+        borderColor: colors.branco,
+        borderRadius: 100,
     }
 
 });
