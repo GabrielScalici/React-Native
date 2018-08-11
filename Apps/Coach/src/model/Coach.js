@@ -28,7 +28,7 @@ class Coach extends Component {
                     source={photo_coach}
                 />
 
-                <ButtonText>
+                <ButtonText onPress={() => this.props.navigate('listaCoach')}>
                     Escolher outro técnico
                 </ButtonText>
 
