@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import {metrics, font, colors } from '../styles';
+import { metrics, font, colors } from '../styles';
 
 //COMPONENTES
 import Header from '../components/Header';
 import ViewPhoto from '../components/ViewPhoto';
+import ItemFlat from '../components/ItemFlat';
+import ButtonText from '../components/ButtonText';
 
 //FOTO 
 const photo_coach = require('../../img/avatar/barack-obama@256px.png');
@@ -12,7 +14,7 @@ const photo_coach = require('../../img/avatar/barack-obama@256px.png');
 class Coach extends Component {
     constructor(props) {
         super(props);
-        this.state = {  };
+        this.state = {};
     }
     render() {
         return (
@@ -21,27 +23,35 @@ class Coach extends Component {
                 <Header> Técnico </Header>
 
                 <ViewPhoto
-                    color1={ colors.primaria }
-                    color2={ colors.teciaria }
+                    color1={colors.primaria}
+                    color2={colors.teciaria}
                     source={photo_coach}
                 />
 
-                <TouchableOpacity onPress={() => this.props.navigation.navigate("listaCoach")}>
-                    <Text style={styles.text_escolher_tecnico}>Escolher técnico</Text>
-                </TouchableOpacity>
+                <ButtonText>
+                    Escolher outro técnico
+                </ButtonText>
+
+                <ItemFlat
+                    touch
+                    text1={"Olá galera linda"}
+                    text2={"Olá galera linda2"}
+                />
+                <ItemFlat
+                    touch
+                    text1={"Olá galera linda"}
+                    text2={"Olá galera linda2"}
+                />
 
             </View>
         );
     }
 }
 const styles = StyleSheet.create({
-    container: {    
+    container: {
         flex: 1,
+        backgroundColor: colors.branco,
     },
-    text_escolher_tecnico: {
-        color: colors.primaria,
-        fontSize: font.btn_pequeno
-    }
 })
 
 export default Coach;

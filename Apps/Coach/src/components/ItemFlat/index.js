@@ -11,26 +11,32 @@ import { metrics, font, colors } from '../../styles';
 import styles from './styles';
 
 
-const ItemFlat = ({ children, back, onPress, touch, photo }) => {
+const ItemFlat = ({ text1, text2, onPress, touch, photo, source }) => {
     if (touch) {
         if (photo) {
             return (
-                <TouchableOpacity style={styles.container}>
+                <TouchableOpacity onPress={onPress} style={styles.container}>
                     <Text>
-
+                        {text1}
+                    </Text>
+                    <Text>
+                        {text2}
                     </Text>
                 </TouchableOpacity>
-                )
+            )
         } else {
             return (
-                <TouchableOpacity style={styles.container}>
+                <TouchableOpacity onPress={onPress} style={styles.container}>
                     <Text>
-
+                        {text1}
+                    </Text>
+                    <Text>
+                        {text2}
                     </Text>
                 </TouchableOpacity>
-                )
+            )
         }
-    }else {
+    } else {
         if (photo) {
             return (
                 <View style={styles.container}>
@@ -38,7 +44,7 @@ const ItemFlat = ({ children, back, onPress, touch, photo }) => {
 
                     </Text>
                 </View>
-                )
+            )
         } else {
             return (
                 <View style={styles.container}>
@@ -46,9 +52,9 @@ const ItemFlat = ({ children, back, onPress, touch, photo }) => {
 
                     </Text>
                 </View>
-                )
+            )
         }
-}
+    }
 
 };
 
