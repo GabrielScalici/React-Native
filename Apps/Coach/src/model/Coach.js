@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import { metrics, font, colors } from '../styles';
 
 //COMPONENTES
@@ -32,16 +32,28 @@ class Coach extends Component {
                     Escolher outro técnico
                 </ButtonText>
 
-                <ItemFlat
-                    touch
-                    text1={"Olá galera linda"}
-                    text2={"Olá galera linda2"}
-                />
-                <ItemFlat
-                    touch
-                    text1={"Olá galera linda"}
-                    text2={"Olá galera linda2"}
-                />
+                <ScrollView>
+                    <ItemFlat
+                        touch
+                        text1={"Olá galera linda"}
+                        text2={"Olá galera linda2"}
+                    />
+                    <ItemFlat
+                        touch
+                        text1={"Olá galera linda"}
+                        text2={"Olá galera linda2"}
+                    />
+                    <ItemFlat
+                        touch
+                        text1={"Olá galera linda"}
+                        text2={"Olá galera linda2"}
+                    />
+                    <ItemFlat
+                        touch
+                        text1={"Olá galera linda"}
+                        text2={"Olá galera linda2"}
+                    />
+                </ScrollView>
 
             </View>
         );
