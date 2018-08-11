@@ -41,7 +41,7 @@ export default createBottomTabNavigator({
         },
       }),
 
-    
+    initialRouteName: 'Estudar',
     tabBarOptions: {
         activeTintColor: colors.primaria,
         inactiveTintColor: colors.cinza,

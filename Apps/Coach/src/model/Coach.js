@@ -7,6 +7,7 @@ import Header from '../components/Header';
 import ViewPhoto from '../components/ViewPhoto';
 import ItemFlat from '../components/ItemFlat';
 import ButtonText from '../components/ButtonText';
+import ItemBlock from '../components/ItemBlock';
 
 //FOTO 
 const batman = require('../../img/avatar/batman@256px.png');
@@ -25,19 +26,19 @@ class Coach extends Component {
         this.state = {
             photo_coach: ''
         };
-/*
-        AsyncStorage.getItem('@COACH_SELECT').then(value => {
-            switch(value){
-                case 'batman':
-                    this.setState({photo_coach: batman});
-                    console.log(batman);
-                    break;
-                case 'obama':
-                    this.setState({photo_coach: obama});
-                    break;
-            }
-        });
-*/
+        /*
+                AsyncStorage.getItem('@COACH_SELECT').then(value => {
+                    switch(value){
+                        case 'batman':
+                            this.setState({photo_coach: batman});
+                            console.log(batman);
+                            break;
+                        case 'obama':
+                            this.setState({photo_coach: obama});
+                            break;
+                    }
+                });
+        */
     }
     render() {
         return (
@@ -45,41 +46,66 @@ class Coach extends Component {
 
                 <Header> Técnico </Header>
 
-                <ViewPhoto
-                    color1={colors.primaria}
-                    color2={colors.teciaria}
-                    source={batman}
-                />
-
-                <ButtonText 
-                    color={colors.primaria}
-                    onPress={() => this.props.navigation.navigate('listaCoach')}>
-                    Escolher outro técnico
-                </ButtonText>
-
                 <ScrollView>
-                    <ItemFlat
-                        touch
-                        text1={"Olá galera linda"}
-                        text2={"Olá galera linda2"}
-                    />
-                    <ItemFlat
-                        touch
-                        text1={"Olá galera linda"}
-                        text2={"Olá galera linda2"}
-                    />
-                    <ItemFlat
-                        touch
-                        text1={"Olá galera linda"}
-                        text2={"Olá galera linda2"}
-                    />
-                    <ItemFlat
-                        touch
-                        text1={"Olá galera linda"}
-                        text2={"Olá galera linda2"}
-                    />
-                </ScrollView>
 
+                    <ViewPhoto
+                        color1={colors.primaria}
+                        color2={colors.teciaria}
+                        source={batman}
+                        name={"Batman"}
+                    />
+
+                    <ButtonText
+                        color={colors.primaria}
+                        onPress={() => this.props.navigation.navigate('listaCoach')}>
+                        Escolher outro técnico
+                    </ButtonText>
+
+                    <View style={styles.container_block}>
+                        <ItemBlock
+                            color1={colors.primaria}
+                            color2={colors.teciaria}>
+                            Felicidade técnico
+                        </ItemBlock>
+                        <ItemBlock
+                            color1={colors.teciaria}
+                            color2={colors.primaria}>
+                            Cobranças
+                        </ItemBlock>
+                    </View>
+
+                    <ItemFlat
+                        touch
+                        text1={"Olá galera linda"}
+                        text2={"Olá galera linda2"}
+                    />
+                    <ItemFlat
+                        touch
+                        text1={"Olá galera linda"}
+                        text2={"Olá galera linda2"}
+                    />
+                    <ItemFlat
+                        touch
+                        text1={"Olá galera linda"}
+                        text2={"Olá galera linda2"}
+                    />
+                    <ItemFlat
+                        touch
+                        text1={"Olá galera linda"}
+                        text2={"Olá galera linda2"}
+                    />
+                    <ItemFlat
+                        touch
+                        text1={"Olá galera linda"}
+                        text2={"Olá galera linda2"}
+                    />
+                    <ItemFlat
+                        touch
+                        text1={"Olá galera linda"}
+                        text2={"Olá galera linda2"}
+                    />
+
+                </ScrollView>
             </View>
         );
     }
@@ -89,6 +115,13 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: colors.branco,
     },
+    container_block: {
+        flexDirection: "row",
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        padding: metrics.padding,
+        backgroundColor: colors.cinza_claro
+    }
 })
 
 export default Coach;

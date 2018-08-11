@@ -17,6 +17,12 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         borderColor: colors.branco,
         borderRadius: 100,
+    },
+    name: {
+        fontFamily: 'System',
+        fontSize: font.title,
+        color: colors.branco,
+        marginTop: metrics.half_padding
     }
 
 });

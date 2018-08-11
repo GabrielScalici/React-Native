@@ -13,7 +13,7 @@ import { metrics, font, colors } from '../../styles';
 import styles from './styles';
 
 
-const ViewPhoto = ({ source, color1, color2, type }) => {
+const ViewPhoto = ({ source, color1, color2, type, name }) => {
    
     return(
     <LinearGradient colors={[color1, color2]} >
@@ -22,6 +22,7 @@ const ViewPhoto = ({ source, color1, color2, type }) => {
                 source={source}
                 style={styles.photo}
             />
+            <Text style={styles.name}> {name} </Text>
         </View>
     </LinearGradient>
    );

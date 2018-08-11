@@ -14,6 +14,10 @@ export default {
     profilePhotoW: 200,
     profilePhotoR: 100,
 
+    blockH: 110,
+    blockW: 155,
+    blockR: 20,
+
     listH: 70,
 
     text_button_radius: 20,
