@@ -14,6 +14,7 @@ export default {
     profilePhotoW: 200,
     profilePhotoR: 100,
 
+    listH: 50,
 
     ...Platform.select({
         ios: { headerHeight: 74, headerPadding: 20 },
