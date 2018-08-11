@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet,ScrollView } from 'react-native';
 import {metrics, font, colors } from '../styles';
 
 //COMPONENTES
 import Header from '../components/Header';
 import ViewPhoto from '../components/ViewPhoto';
+import ButtonText from '../components/ButtonText';
+import ItemFlat from '../components/ItemFlat';
 
 const photo_user = require('../../img/user/eu.jpg');
 
 class Perfil extends Component {
     constructor(props) {
         super(props);
-        this.state = {  };
+        this.state = { 
+            name: 'Gabriel Scalici',
+         };
     }
     render() {
         return (
@@ -22,7 +26,48 @@ class Perfil extends Component {
                     color1={colors.primaria}
                     color2={colors.teciaria}
                     source={photo_user}
+                    name={this.state.name}
                 />
+
+                <ScrollView>
+                    <ButtonText
+                        color={colors.primaria}
+                        onPress={() => {}}>
+                        ESCOLHER OUTRO TÉCNICO
+                    </ButtonText>
+
+                    <ItemFlat
+                        touch
+                        text1={"Olá galera linda"}
+                        text2={"Olá galera linda2"}
+                    />
+                    <ItemFlat
+                        touch
+                        text1={"Olá galera linda"}
+                        text2={"Olá galera linda2"}
+                    />
+                    <ItemFlat
+                        touch
+                        text1={"Olá galera linda"}
+                        text2={"Olá galera linda2"}
+                    />
+                    <ItemFlat
+                        touch
+                        text1={"Olá galera linda"}
+                        text2={"Olá galera linda2"}
+                    />
+                    <ItemFlat
+                        touch
+                        text1={"Olá galera linda"}
+                        text2={"Olá galera linda2"}
+                    />
+                    <ItemFlat
+                        touch
+                        text1={"Olá galera linda"}
+                        text2={"Olá galera linda2"}
+                    />
+
+                </ScrollView>
 
             </View>
         );

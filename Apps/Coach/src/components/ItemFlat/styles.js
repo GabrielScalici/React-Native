@@ -11,7 +11,8 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         borderBottomColor: colors.cinza_claro,
         borderTopWidth: 1,
-        borderTopColor: colors.cinza_claro
+        borderTopColor: colors.cinza_claro,
+        backgroundColor: colors.branco
     },
     text1: {
         fontSize: font.medium_text,

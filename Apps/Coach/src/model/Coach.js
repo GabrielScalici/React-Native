@@ -24,7 +24,8 @@ class Coach extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            photo_coach: ''
+            photo_coach: '',
+            name_coach: 'Batman'
         };
         /*
                 AsyncStorage.getItem('@COACH_SELECT').then(value => {
@@ -52,13 +53,13 @@ class Coach extends Component {
                         color1={colors.primaria}
                         color2={colors.teciaria}
                         source={batman}
-                        name={"Batman"}
+                        name={this.state.name_coach}
                     />
 
                     <ButtonText
                         color={colors.primaria}
                         onPress={() => this.props.navigation.navigate('listaCoach')}>
-                        Escolher outro técnico
+                        ESCOLHER OUTRO TÉCNICO
                     </ButtonText>
 
                     <View style={styles.container_block}>
