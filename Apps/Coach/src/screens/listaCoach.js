@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Text, ScrollView } from 'react-native';
+import { View, StyleSheet, Text, ScrollView, AsyncStorage } from 'react-native';
 
 import { metrics, font, colors } from '../styles';
 
@@ -32,10 +32,18 @@ class listaCoach extends Component {
                 <ScrollView>
 
                     <ListCoach
+                        onPress={() => {
+                            AsyncStorage.setItem('@COACH_SELECT', 'batman');
+                            this.props.navigation.goBack(null);
+                        }}
                         img={batman}
                         name={"Batman"}
                     />
                     <ListCoach
+                        onPress={() => {
+                            AsyncStorage.setItem('@COACH_SELECT', 'obama');
+                            this.props.navigation.goBack(null);
+                        }}
                         img={obama}
                         name={"Obama"}
                     />

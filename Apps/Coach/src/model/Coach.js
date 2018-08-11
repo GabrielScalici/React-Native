@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView, AsyncStorage } from 'react-native';
 import { metrics, font, colors } from '../styles';
 
 //COMPONENTES
@@ -9,12 +9,35 @@ import ItemFlat from '../components/ItemFlat';
 import ButtonText from '../components/ButtonText';
 
 //FOTO 
-const photo_coach = require('../../img/avatar/barack-obama@256px.png');
+const batman = require('../../img/avatar/batman@256px.png');
+const obama = require('../../img/avatar/barack-obama@256px.png');
+const chaplin = require('../../img/avatar/charlie-chaplin@256px.png');
+const cr7 = require('../../img/avatar/cristiano-ronaldo@256px.png');
+const gandhi = require('../../img/avatar/mahatma-gandhi@256px.png');
+const robot = require('../../img/avatar/robot-01@256px.png');
+const african = require('../../img/avatar/traditional-african-woman@256px.png');
+const japanese = require('../../img/avatar/traditional-japanese-woman@256px.png');
+
 
 class Coach extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            photo_coach: ''
+        };
+/*
+        AsyncStorage.getItem('@COACH_SELECT').then(value => {
+            switch(value){
+                case 'batman':
+                    this.setState({photo_coach: batman});
+                    console.log(batman);
+                    break;
+                case 'obama':
+                    this.setState({photo_coach: obama});
+                    break;
+            }
+        });
+*/
     }
     render() {
         return (
@@ -25,7 +48,7 @@ class Coach extends Component {
                 <ViewPhoto
                     color1={colors.primaria}
                     color2={colors.teciaria}
-                    source={photo_coach}
+                    source={batman}
                 />
 
                 <ButtonText 
