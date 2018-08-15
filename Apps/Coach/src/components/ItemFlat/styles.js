@@ -22,6 +22,10 @@ const styles = StyleSheet.create({
         fontSize: font.medium_text,
         color: colors.secundaria,
     },
+    photo:{
+        height: 100,
+        width: 100,
+    }
 });
 
 export default styles;

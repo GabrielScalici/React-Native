@@ -16,9 +16,10 @@ const ItemFlat = ({ text1, text2, onPress, touch, photo, source }) => {
         if (photo) {
             return (
                 <TouchableOpacity onPress={onPress} style={styles.container}>
-                    <Text>
-                        {text1}
-                    </Text>
+                    <Image
+                        source={source}
+                        style={styles.photo}
+                    />
                     <Text>
                         {text2}
                     </Text>
@@ -40,6 +41,10 @@ const ItemFlat = ({ text1, text2, onPress, touch, photo, source }) => {
         if (photo) {
             return (
                 <View style={styles.container}>
+                    <Image
+                        source={source}
+                        style={styles.photo}
+                    />
                     <Text>
 
                     </Text>
