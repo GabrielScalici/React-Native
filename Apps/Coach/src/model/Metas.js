@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, AsyncStorage, ScrollView, TextInput, TouchableOpacity } from 'react-native';
 import { metrics, font, colors } from '../styles';
+import LinearGradient from 'react-native-linear-gradient';
 
 //COMPONENTES
 import Header from '../components/Header';
 import Note from '../components/Note';
+import ButtonText from '../components/ButtonText';
 
 class Metas extends Component {
     constructor(props) {
@@ -80,18 +82,20 @@ class Metas extends Component {
             <View style={styles.container}>
                 <Header> Metas </Header>
                 <ScrollView>
-                    <TextInput
-                        style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
-                        onChangeText={(noteTextW) => this.setState({ noteTextW })} value={this.state.noteTextW}
-                        value={this.state.text}
-                    />
-                    <TouchableOpacity onPress={this.addNote.bind(this)}>
-                        <View style={styles.view_btn}>
-                            <Text style={styles.btn_new}>
-                                Adicionar nova tarefa
-                                </Text>
-                        </View>
-                    </TouchableOpacity>
+                    <LinearGradient colors={[colors.primaria, colors.teciaria]} style={styles.container} >
+                        <TextInput
+                            placeholderTextColor={colors.branco}
+                            placeholder={"Clique aqui para digitar a nova meta"}
+                            style={styles.text_input}
+                            onChangeText={(noteTextW) => this.setState({ noteTextW })} value={this.state.noteTextW}
+                            value={this.state.text}
+                        />
+                    </LinearGradient>
+                    <ButtonText
+                        color={colors.primaria}
+                        onPress={this.addNote.bind(this)}>
+                        ADICIONAR NOVA META
+                    </ButtonText>
                     {notes}
 
                 </ScrollView>
@@ -102,12 +106,13 @@ class Metas extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: colors.background_claro,
     },
     view_btn: {
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'gray',
+        backgroundColor: colors.primaria,
         height: 60,
     },
     btn_new: {
@@ -118,7 +123,21 @@ const styles = StyleSheet.create({
         margin: 5,
         color: 'white',
     },
+    text_input: {
+        backgroundColor: 'transparent',
+        height: 60,
+        fontSize: font.small_title,
+        textAlign: 'center',
+        textAlignVertical: 'center',
+        color: colors.branco
+
+    }
 })
 
 export default Metas;
 
+/**
+ *                     <TouchableOpacity onPress={this.addNote.bind(this)} style={styles.view_btn}>
+                        <Text style={styles.btn_new}> Adicionar nova tarefa </Text>
+                    </TouchableOpacity>
+ */

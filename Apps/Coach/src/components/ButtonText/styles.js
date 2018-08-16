@@ -16,6 +16,7 @@ const styles = StyleSheet.create({
         paddingVertical: metrics.half_padding,
         paddingHorizontal: metrics.double_padding,
         textAlign: 'center',
+        textAlignVertical: 'center',
         margin: 1
     },
     text_inline: {

@@ -1,5 +1,6 @@
 export default {
     title: 25,
+    small_title: 20,
     subtitle: 12,
     medium_text: 12, 
 

@@ -14,27 +14,25 @@ import styles from './styles';
 const ButtonText = ({ children, onPress, outline, color }) => {
     if (outline) {
         return (
-            <View style={[styles.container]}>
-                <TouchableOpacity
-                    onPress={onPress}
-                >
-                    <Text style={[styles.text, { color: color, borderColor: color }]}>
-                        {children}
-                    </Text>
-                </TouchableOpacity>
-            </View>
+            <TouchableOpacity
+                onPress={onPress}
+                style={[styles.container]}
+            >
+                <Text style={[styles.text, { color: color, borderColor: color }]}>
+                    {children}
+                </Text>
+            </TouchableOpacity>
         );
     } else {
         return (
-            <View style={[styles.container]}>
-                <TouchableOpacity
-                    onPress={onPress}
-                >
-                    <Text style={[styles.text, { color: colors.branco, borderColor: 'transparent', backgroundColor: color }]}>
-                        {children}
-                    </Text>
-                </TouchableOpacity>
-            </View>
+            <TouchableOpacity
+                onPress={onPress}
+                style={[styles.container]}
+            >
+                <Text style={[styles.text, { color: colors.branco, borderColor: 'transparent', backgroundColor: color }]}>
+                    {children}
+                </Text>
+            </TouchableOpacity>
         );
     }
 };

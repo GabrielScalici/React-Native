@@ -9,4 +9,7 @@ export default {
 
     background_claro: 'white',
     background_dark: 'black',
+
+    check: '#A9ECA2',
+    trash: '#FF7777',
 };
