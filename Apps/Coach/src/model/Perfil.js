@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet,ScrollView } from 'react-native';
-import {metrics, font, colors } from '../styles';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { metrics, font, colors } from '../styles';
 
 //COMPONENTES
 import Header from '../components/Header';
@@ -13,26 +13,26 @@ const photo_user = require('../../img/user/eu.jpg');
 class Perfil extends Component {
     constructor(props) {
         super(props);
-        this.state = { 
+        this.state = {
             name: 'Gabriel Scalici',
-         };
+        };
     }
     render() {
         return (
             <View style={styles.container}>
                 <Header> Perfil </Header>
-                
-                <ViewPhoto
-                    color1={colors.primaria}
-                    color2={colors.teciaria}
-                    source={photo_user}
-                    name={this.state.name}
-                />
 
                 <ScrollView>
+                    <ViewPhoto
+                        color1={colors.primaria}
+                        color2={colors.teciaria}
+                        source={photo_user}
+                        name={this.state.name}
+                    />
+
                     <ButtonText
                         color={colors.primaria}
-                        onPress={() => {}}>
+                        onPress={() => { }}>
                         TROCAR DE FOTO
                     </ButtonText>
 
@@ -74,7 +74,7 @@ class Perfil extends Component {
     }
 }
 const styles = StyleSheet.create({
-    container: {    
+    container: {
         flex: 1,
     },
 })

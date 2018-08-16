@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ScrollView} from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import { metrics, font, colors } from '../styles';
 import LinearGradient from 'react-native-linear-gradient';
 import renderIf from 'render-if';
@@ -14,81 +14,118 @@ class Estudar extends Component {
         super(props);
         this.state = {
             materia: '',
+            estudo: '',
         };
     }
     render() {
         return (
             <View style={styles.container}>
                 <Header> Estudar </Header>
+                {renderIf(!this.state.materia)(
+                    <View>
+                        <View style={styles.container_titulo}>
+                            <Text style={styles.title_branco}> O que vamos estudar agora? </Text>
+                        </View>
+                        <View style={styles.materias}>
+                            <ScrollView>
+                                <ItemFlat
+                                    touch
+                                    icon
+                                    name={"plus"}
+                                    text1={"Cadastrar nova matéria"}
+                                />
+                                <ItemFlat
+                                    touch
+                                    onPress={() => this.setState({ materia: 'Cálculo' })}
+                                    text1={"Cálculo"}
+                                />
+                                <ItemFlat
+                                    touch
+                                    onPress={() => this.setState({ materia: 'Física' })}
+                                    text1={"Física"}
+                                />
+                                <ItemFlat
+                                    touch
+                                    onPress={() => this.setState({ materia: 'ICC' })}
+                                    text1={"ICC"}
+                                />
+                                <ItemFlat
+                                    touch
+                                    onPress={() => this.setState({ materia: 'Química' })}
+                                    text1={"Química"}
+                                />
+                                <ItemFlat
+                                    touch
+                                    onPress={() => this.setState({ materia: 'React-native' })}
+                                    text1={"React-Native"}
+                                />
+                            </ScrollView>
+                        </View>
+                    </View>
+                )}
 
-                <Text style={styles.title}> 1. O que vamos estudar agora? </Text>
-                <View style={styles.materias}>
-                    <ScrollView>
-                        <ItemFlat
-                            touch
-                            icon
-                            name={"plus"}
-                            text1={"Cadastrar nova matéria"}
-                        />
-                        <ItemFlat
-                            touch
-                            onPress={() => this.setState({ materia: 'Cálculo' })}
-                            text1={"Cálculo"}
-                        />
-                        <ItemFlat
-                            touch
-                            onPress={() => this.setState({ materia: 'Física' })}
-                            text1={"Física"}
-                        />
-                        <ItemFlat
-                            touch
-                            onPress={() => this.setState({ materia: 'ICC' })}
-                            text1={"ICC"}
-                        />
-                        <ItemFlat
-                            touch
-                            onPress={() => this.setState({ materia: 'Química' })}
-                            text1={"Química"}
-                        />
-                        <ItemFlat
-                            touch
-                            onPress={() => this.setState({ materia: 'React-native' })}
-                            text1={"React-Native"}
-                        />
-                    </ScrollView>
-                </View>
-                <ScrollView>
-                    {renderIf(this.state.materia)(
-                            <View>
-                                <Text style={styles.subtitle}> Tudo bem, vamos estudar: </Text>
-                                <LinearGradient colors={[colors.primaria, colors.teciaria]} >
-                                    <Text style={styles.escolha}> {this.state.materia} </Text>
-                                </LinearGradient>
-                            </View>
-                    )
+                {renderIf(this.state.materia)(
+                    <View>
+                        <Text style={styles.title}> Tudo bem, vamos estudar: </Text>
+                        <LinearGradient colors={[colors.primaria, colors.teciaria]} >
+                            <Text style={styles.escolha}> {this.state.materia} </Text>
+                        </LinearGradient>
+                        <ButtonText
+                            outline
+                            onPress={() => this.setState({ materia: '' })}
+                            color={colors.primaria}>
+                            ESCOLHER OUTRA MATÉRIA
+                            </ButtonText>
+                    </View>
+                )
                 }
-                    <Text style={styles.title}> 2. Como você irá estudar? </Text>
-                    <View style={{ flexDirection: "row", justifyContent: 'space-around', backgroundColor: colors.cinza_claro }}>
-                        <ButtonText
-                            color={colors.primaria}>
-                            POMODORO
-                    </ButtonText>
-                        <ButtonText
-                            color={colors.primaria}>
-                            CRONÔMETRO
-                    </ButtonText>
+
+                {renderIf(!this.state.estudo)(
+                    <View>
+                        <View style={styles.container_titulo}>
+                            <Text style={styles.title_branco}> Como você irá estudar? </Text>
+                        </View>
+                        <View style={styles.materias}>
+                            <ScrollView>
+                                <ItemFlat
+                                    touch
+                                    onPress={() => this.setState({ estudo: 'Pomodoro' })}
+                                    text1={"Pomodoro"}
+                                />
+                                <ItemFlat
+                                    touch
+                                    onPress={() => this.setState({ estudo: 'Cronômetro' })}
+                                    text1={"Cronômetro"}
+                                />
+                                <ItemFlat
+                                    touch
+                                    onPress={() => this.setState({ estudo: 'Anotar Horário' })}
+                                    text1={"Anotar Horário"}
+                                />
+                                <ItemFlat
+                                    touch
+                                    onPress={() => this.setState({ estudo: 'Não salvar' })}
+                                    text1={"Não salvar"}
+                                />
+                            </ScrollView>
+                        </View>
                     </View>
-                    <View style={{ flexDirection: "row", justifyContent: 'space-around', backgroundColor: colors.cinza_claro }}>
+                )}
+
+                {renderIf(this.state.estudo)(
+                    <View>
+                        <Text style={styles.title}> Ótimo, usaremos: </Text>
+                        <LinearGradient colors={[colors.primaria, colors.teciaria]} >
+                            <Text style={styles.escolha}> {this.state.estudo} </Text>
+                        </LinearGradient>
                         <ButtonText
+                            outline
+                            onPress={() => this.setState({ estudo: '' })}
                             color={colors.primaria}>
-                            ANOTAR TEMPO
-                    </ButtonText>
-                        <ButtonText
-                            color={colors.primaria}>
-                            NÃO CONTAR
-                    </ButtonText>
+                            ESCOLHER OUTRO MÉTODO
+                            </ButtonText>
                     </View>
-                </ScrollView>
+                )}
 
 
             </View>
@@ -100,6 +137,9 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: colors.background_claro,
     },
+    container_titulo: {
+        backgroundColor: colors.primaria,
+    },
     materias: {
         height: 250,
         backgroundColor: colors.cinza_claro,
@@ -108,6 +148,14 @@ const styles = StyleSheet.create({
     title: {
         fontSize: font.small_title,
         color: colors.primaria,
+        textAlign: 'center',
+        textAlignVertical: 'center',
+        fontFamily: 'System',
+        margin: metrics.half_padding
+    },
+    title_branco: {
+        fontSize: font.small_title,
+        color: colors.branco,
         textAlign: 'center',
         textAlignVertical: 'center',
         fontFamily: 'System',
