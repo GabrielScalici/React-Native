@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, AsyncStorage, ScrollView, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, AsyncStorage, ScrollView, TextInput, TouchableOpacity, StatusBar } from 'react-native';
 import { metrics, font, colors } from '../styles';
 import LinearGradient from 'react-native-linear-gradient';
 
@@ -80,6 +80,10 @@ class Metas extends Component {
 
         return (
             <View style={styles.container}>
+                <StatusBar
+                    backgroundColor={colors.cinza_claro}
+                    barStyle="dark-content"
+                />
                 <Header> Metas </Header>
                 <ScrollView>
                     <LinearGradient colors={[colors.primaria, colors.teciaria]} style={styles.container} >

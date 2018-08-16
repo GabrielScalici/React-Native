@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView, AsyncStorage } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView, AsyncStorage, StatusBar } from 'react-native';
 import { metrics, font, colors } from '../styles';
 
 //COMPONENTES
@@ -44,6 +44,10 @@ class Coach extends Component {
     render() {
         return (
             <View style={styles.container}>
+                <StatusBar
+                    backgroundColor={colors.cinza_claro}
+                    barStyle="dark-content"
+                />
 
                 <Header> Técnico </Header>
 

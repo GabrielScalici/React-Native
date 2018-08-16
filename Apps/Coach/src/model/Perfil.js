@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, StatusBar } from 'react-native';
 import { metrics, font, colors } from '../styles';
 
 //COMPONENTES
@@ -20,6 +20,10 @@ class Perfil extends Component {
     render() {
         return (
             <View style={styles.container}>
+                <StatusBar
+                    backgroundColor={colors.cinza_claro}
+                    barStyle="dark-content"
+                />
                 <Header> Perfil </Header>
 
                 <ScrollView>

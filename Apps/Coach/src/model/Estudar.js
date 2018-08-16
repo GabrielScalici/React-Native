@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, StatusBar } from 'react-native';
 import { metrics, font, colors } from '../styles';
 import LinearGradient from 'react-native-linear-gradient';
 import renderIf from 'render-if';
@@ -20,6 +20,10 @@ class Estudar extends Component {
     render() {
         return (
             <View style={styles.container}>
+                <StatusBar
+                    backgroundColor={colors.cinza_claro}
+                    barStyle="dark-content"
+                />
                 <Header> Estudar </Header>
                 {renderIf(!this.state.materia)(
                     <View>
