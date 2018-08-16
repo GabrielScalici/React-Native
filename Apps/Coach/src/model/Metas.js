@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, AsyncStorage } from 'react-native';
+import { View, Text, StyleSheet, AsyncStorage, ScrollView, TextInput, TouchableOpacity } from 'react-native';
 import { metrics, font, colors } from '../styles';
 
 //COMPONENTES
 import Header from '../components/Header';
+import Note from '../components/Note';
 
 class Metas extends Component {
     constructor(props) {
@@ -78,6 +79,22 @@ class Metas extends Component {
         return (
             <View style={styles.container}>
                 <Header> Metas </Header>
+                <ScrollView>
+                    <TextInput
+                        style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
+                        onChangeText={(noteTextW) => this.setState({ noteTextW })} value={this.state.noteTextW}
+                        value={this.state.text}
+                    />
+                    <TouchableOpacity onPress={this.addNote.bind(this)}>
+                        <View style={styles.view_btn}>
+                            <Text style={styles.btn_new}>
+                                Adicionar nova tarefa
+                                </Text>
+                        </View>
+                    </TouchableOpacity>
+                    {notes}
+
+                </ScrollView>
             </View>
         );
     }
@@ -85,6 +102,21 @@ class Metas extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+    },
+    view_btn: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'gray',
+        height: 60,
+    },
+    btn_new: {
+        fontSize: 20,
+        fontWeight: 'normal',
+        fontFamily: 'System',
+        textAlign: 'center',
+        margin: 5,
+        color: 'white',
     },
 })
 

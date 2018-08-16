@@ -23,7 +23,8 @@ export default class Note extends Component {
         const leftContent =
             <View style={styles.btn_check}>
                 <TouchableOpacity onPress={this.props.deleteMethod}>
-                    <Image source={check} style={styles.icons_menu}/>
+                    {/*<Image source={check} style={styles.icons_menu}/>*/}
+                    <Text> X </Text>
                 </TouchableOpacity>
             </View>;
 
