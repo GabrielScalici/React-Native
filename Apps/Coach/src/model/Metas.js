@@ -97,7 +97,6 @@ class Metas extends Component {
                         ADICIONAR NOVA META
                     </ButtonText>
                     {notes}
-
                 </ScrollView>
             </View>
         );

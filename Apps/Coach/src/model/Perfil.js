@@ -33,7 +33,7 @@ class Perfil extends Component {
                     <ButtonText
                         color={colors.primaria}
                         onPress={() => {}}>
-                        ESCOLHER OUTRO TÉCNICO
+                        TROCAR DE FOTO
                     </ButtonText>
 
                     <ItemFlat

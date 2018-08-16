@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         padding: metrics.half_padding,
-        backgroundColor: colors.branco
+        backgroundColor: colors.cinza_claro
     },
     text: {
         fontSize: font.btn_pequeno,
