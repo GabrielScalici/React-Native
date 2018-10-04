@@ -1,10 +1,12 @@
 export default {
 
-    primariaVerde: '#00C3B5',
-    primariaAzul: '#00B8D5',
+    primaria: '#e23838',
+    secundaria: '#eae041',
+    terciaria: '#3f0406',
+    quaternaria: '#ffb243'
 
-    secundaria1: '#270757',
-    secundaria2: '#ff007b',
+    back_light: '#FFFFFF',
+    back_dark: '#a1a1a1',
 
     error: '#B00020',
 
