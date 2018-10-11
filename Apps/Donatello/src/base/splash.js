@@ -34,9 +34,9 @@ export default class loginScreen extends Component<Props> {
                     </View>
                 </View>
 
-                <View style={{justifyContent:'flex-end', flex:1}}>
+                {/* <View style={{justifyContent:'flex-end', flex:1}}>
                     <Text style={styles.subtitle}> Versão 1.0.0 </Text>
-                </View>
+                </View> */}
             </View>
 
         );
