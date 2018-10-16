@@ -32,6 +32,12 @@ export default class loginScreen extends Component<Props> {
                     <View style={{flex:1,  justifyContent: 'center', alignItems: 'center', marginTop:150, marginBottom:100}}>
                         <Image style={{width: widthS - 14, height: widthS - 14, padding: 7 }} source={logo} />
                     </View>
+                    <View style={{flex:1,  justifyContent: 'center', alignItems: 'center', marginTop:150, marginBottom:100}}>
+                        <Image style={{width: widthS - 14, height: widthS - 14, padding: 7 }} source={logo} />
+                    </View>
+                    <View style={{flex:1,  justifyContent: 'center', alignItems: 'center', marginTop:150, marginBottom:100}}>
+                        <Image style={{width: widthS - 14, height: widthS - 14, padding: 7 }} source={logo} />
+                    </View>
                 </View>
 
                 {/* <View style={{justifyContent:'flex-end', flex:1}}>
